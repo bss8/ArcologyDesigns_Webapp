@@ -10,7 +10,12 @@ import org.json.JSONArray;
 
 public class SQLDatabaseTest {
 
+    public static JSONArray jsonArray;
+
     public static void main(String[] args) {
+
+
+
         String connectionString =
                 "jdbc:sqlserver://ads-test.database.windows.net:1433;"
                         + "database=ads-test-db;"
@@ -21,6 +26,11 @@ public class SQLDatabaseTest {
                         + "hostNameInCertificate=*.database.windows.net;"
                         + "loginTimeout=30;";
 
+        try {
+            Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
         // Declare the JDBC objects.
         Connection connection = null;
         Statement statement = null;
@@ -61,8 +71,11 @@ public class SQLDatabaseTest {
             resultSet = statement.executeQuery(selectSql);
 
             JSONArray a = ResultSetConverter.convert(resultSet);
+            SQLDatabaseTest.setJSONArray(a);
             for (int i = 0; i < a.length(); i++)
                 System.out.println(a.get(i));
+
+
 
             // Iterate through the result set and print the attributes.
             while (resultSet.next()) {
@@ -82,6 +95,14 @@ public class SQLDatabaseTest {
             if (statement != null) try { statement.close(); } catch(Exception e) {}
             if (connection != null) try { connection.close(); } catch(Exception e) {}
         }
+    }
+
+    public static void setJSONArray(JSONArray a) {
+        jsonArray = a;
+    }
+
+    public static JSONArray getJsonArray() {
+        return jsonArray;
     }
 
 }

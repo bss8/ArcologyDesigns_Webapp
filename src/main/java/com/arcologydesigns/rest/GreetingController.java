@@ -4,9 +4,12 @@ package com.arcologydesigns.rest;
  * Created by Boris on 12/13/2015.
  */
 import java.util.concurrent.atomic.AtomicLong;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+
+import com.arcologydesigns.dbconn.SQLDatabaseTest;
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 public class GreetingController {
@@ -18,5 +21,20 @@ public class GreetingController {
     public Greeting greeting(@RequestParam(value="name", defaultValue="World") String name) {
         return new Greeting(counter.incrementAndGet(),
                 String.format(template, name));
+    }
+
+    @RequestMapping(value="/azureTest", method=RequestMethod.GET, produces="application/json")
+    @ResponseBody
+    public String azureTest() {
+        SQLDatabaseTest.main(new String[]{"Test001"});
+        JSONArray jsonArray = SQLDatabaseTest.getJsonArray();
+        JSONObject jsonObject = new JSONObject();
+        try {
+            jsonObject.put("arrayName", jsonArray);
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+
+        return jsonObject.toString();
     }
 }

@@ -2,7 +2,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.arcologydesigns.rest</groupId>
-    <artifactId>springexample</artifactId>
+    <artifactId>ads-webapp</artifactId>
     <packaging>war</packaging>
     <version>0.0.1-SNAPSHOT</version>
     <name>springexample Maven Webapp</name>
@@ -13,7 +13,8 @@
         <spring.version>4.0.5.RELEASE</spring.version>
         <jdk.version>1.8</jdk.version>
         <jackson.version>2.2.3</jackson.version>
-        <sqlserver.version>4.2.6420.100</sqlserver.version>
+        <!--<sqlserver.version>4.2.6420.100</sqlserver.version>-->
+        <sqlserver.version>4</sqlserver.version>
         <build.scm.revision>SCM_IDENTIFIER</build.scm.revision>
         <build.number>BUILD_NUMBER</build.number>
         <build.id>BUILD_ID</build.id>
@@ -54,7 +55,7 @@
 
     </dependencies>
     <build>
-        <finalName>springexample</finalName>
+        <finalName>ads-webapp</finalName>
     </build>
 
 

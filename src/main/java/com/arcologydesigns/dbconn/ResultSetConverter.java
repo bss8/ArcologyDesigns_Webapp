@@ -2,6 +2,8 @@ package com.arcologydesigns.dbconn;
 
 /**
  * Created by Boris on 12/13/2015.
+ * Class by Devin Dixon
+ * https://stackoverflow.com/questions/6514876/most-effecient-conversion-of-resultset-to-json
  */
 
 import org.json.JSONArray;
