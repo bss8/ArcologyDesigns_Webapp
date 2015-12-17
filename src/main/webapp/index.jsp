@@ -4,8 +4,8 @@
     <head>
         <title>Title</title>
         <script type="text/javascript" src="resources/js/jquery-2.1.4.js"></script>
-        <link rel="stylesheet" type="text/css" href="resources/semantic/dist/semantic.min.css">
-        <script type="text/javascript" src="resources/semantic/dist/semantic.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="resources/semantic-ui/dist/semantic.min.css">
+        <script type="text/javascript" src="resources/semantic-ui/dist/semantic.min.js"></script>
     </head>
     <body>
         <h1>Spring 4.0.2 MVC web service</h1>
