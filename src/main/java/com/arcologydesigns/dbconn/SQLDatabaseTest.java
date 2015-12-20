@@ -51,13 +51,13 @@ public class SQLDatabaseTest {
             prepsInsertPerson = connection.prepareStatement(
                     insertSql,
                     Statement.RETURN_GENERATED_KEYS);
-            prepsInsertPerson.execute();
+            //prepsInsertPerson.execute();
             // Retrieve the generated key from the insert.
-            resultSet = prepsInsertPerson.getGeneratedKeys();
+            //resultSet = prepsInsertPerson.getGeneratedKeys();
             // Iterate through the set of generated keys.
-            while (resultSet.next()) {
-                System.out.println("Generated: " + resultSet.getString(1));
-            }
+            //while (resultSet.next()) {
+              //  System.out.println("Generated: " + resultSet.getString(1));
+            //}
 
 
             // TRANSACTION and commit for an UPDATE.

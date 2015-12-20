@@ -3,8 +3,8 @@ package com.arcologydesigns.rest;
 /**
  * Created by Boris on 12/13/2015.
  */
-import java.util.concurrent.atomic.AtomicLong;
 
+import java.util.concurrent.atomic.AtomicLong;
 import com.arcologydesigns.dbconn.SQLDatabaseTest;
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -21,7 +21,7 @@ public class GreetingController {
     public Greeting greeting(@RequestParam(value="name", defaultValue="World") String name) {
         return new Greeting(counter.incrementAndGet(),
                 String.format(template, name));
-    }
+    } // end greeting()
 
     @RequestMapping(value="/azureTest", method=RequestMethod.GET, produces="application/json")
     @ResponseBody
@@ -36,5 +36,5 @@ public class GreetingController {
         }
 
         return jsonObject.toString();
-    }
-}
+    } // end azureTest()
+} // end GreetingController

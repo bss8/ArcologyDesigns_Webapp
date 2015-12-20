@@ -2,34 +2,33 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
     <head>
-        <title>Title</title>
-        <script type="text/javascript" src="resources/js/jquery-2.1.4.js"></script>
-        <link rel="stylesheet" type="text/css" href="resources/semantic-ui/dist/semantic.min.css">
-        <script type="text/javascript" src="resources/semantic-ui/dist/semantic.min.js"></script>
+        <title>ADS ¯\_(ツ)_/¯</title>
+
+        <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/semantic-ui/dist/semantic.min.css">
+        <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/jquery.dataTables.min.css">
+        <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/style.css">
+        <script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/jquery-2.1.4.js"></script>
+        <script type="text/javascript" src="${pageContext.request.contextPath}/resources/semantic-ui/dist/semantic.min.js"></script>
+        <script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/jquery.dataTables.min.js"></script>
+        <script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/ads-custom.js"></script>
+
+        <style id="antiClickjack">body{display:none !important;}</style>
+        <script type="text/javascript">
+            if (self === top) {
+                var antiClickjack = document.getElementById("antiClickjack");
+                antiClickjack.parentNode.removeChild(antiClickjack);
+            } else {
+                top.location = self.location;
+            }
+        </script>
+
     </head>
     <body>
-        <h1>Spring 4.0.2 MVC web service</h1>
-        <h3>Name : ${name}</h3>
 
-        <label for="dropdown_1">Dropdown test: </label>
-        <select id="dropdown_1" name="skills" multiple="" class="ui fluid dropdown" >
-            <option value="">Skills</option>
-            <option value="angular">Angular</option>
-            <option value="css">CSS</option>
-            <option value="ember">Ember</option>
-            <option value="html">HTML</option>
-            <option value="javascript">Javascript</option>
-            <option value="meteor">Meteor</option>
-            <option value="node">NodeJS</option>
-        </select>
-
-    <script>
-        (function($){
-            $('select.dropdown')
-                    .dropdown('set selected', ['meteor', 'ember'])
-            ;
-        })(jQuery);
-
-    </script>
+        <jsp:include page="pages/sidebar_menu.jsp" flush="true" />
+        <jsp:include page="pages/horizontal_menu.jsp" flush="true" />
+        <jsp:include page="pages/rest_table_example.jsp" flush="true" />
+        <div id ="content"> </div>
     </body>
 </html>
+

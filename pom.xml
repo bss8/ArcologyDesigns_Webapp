@@ -5,9 +5,9 @@
     <artifactId>ads-webapp</artifactId>
     <packaging>war</packaging>
     <version>0.0.1-SNAPSHOT</version>
-    <name>springexample Maven Webapp</name>
+    <name>ADS Maven Webapp</name>
     <url>http://maven.apache.org</url>
-
+   
     <properties>
         <endorsed.dir>${project.build.directory}/endorsed</endorsed.dir>
         <spring.version>4.0.5.RELEASE</spring.version>

@@ -2,3 +2,11 @@
 * Created by Boris on 12/16/2015 @ 7:28 PM
 * Contains custom application style & multi-resolution media queries
 */
+
+#adsSidebarButton {
+   cursor:pointer;
+}
+
+.ui.vertical.menu {
+   font-size: large;
+}
