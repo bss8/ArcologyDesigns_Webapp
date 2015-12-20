@@ -49,9 +49,8 @@
         <dependency>
             <groupId>org.json</groupId>
             <artifactId>json</artifactId>
-            <version>20090211</version>
+            <version>20120521</version>
         </dependency>
-
 
     </dependencies>
     <build>
