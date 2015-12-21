@@ -6,11 +6,19 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html>
-<head>
-    <title>Title</title>
-</head>
-<body>
-    <p>TEST</p>
-</body>
-</html>
+
+<div class="ui four item stackable tabs menu">
+
+    <a class="item active" data-tab="definition">Definition</a>
+
+
+    <a class="item" data-tab="examples">Examples</a>
+
+
+    <a class="item" data-tab="usage">Usage</a>
+
+
+    <a class="item" data-tab="settings">Settings</a>
+
+
+</div>

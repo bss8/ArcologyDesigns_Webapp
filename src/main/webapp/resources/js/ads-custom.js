@@ -40,3 +40,13 @@ function toggleSidebar() {
 
 }
 
+$('.ui.button')
+    .on('click', function() {
+       // programmatically activating tab
+       $.tab('change tab', 'tab name');
+    })
+;
+
+$(document).ready(function(){
+   $('.demo.menu .item').tab({history:false});
+});
