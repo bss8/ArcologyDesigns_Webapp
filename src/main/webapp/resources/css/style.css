@@ -48,5 +48,9 @@ a {
 
 #errmsg
 {
-   color: red;
+   color: #B81D18;
+}
+
+.siteHeadlineColor {
+   color: #B81D18;
 }

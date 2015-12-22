@@ -30,55 +30,94 @@
 
         <div class="main ui container" style="margin-left: 280px !important; width: 80%;">
 
-            <div class="ui active tab segment" data-tab="release_notes" style="margin-top: 14px;">release_notes <p style="float:right">RIGHT</p>
+            <div class="ui active tab segment" data-tab="release_notes" style="margin-top: 14px;">
+                <h1 style="color: #B81D18">Converting From Base-n To Base-n <span style="float:right">RIGHT</span></h1>
+                <hr class="horizontal" />
+                <br/>
                 <jsp:include page="pages/release_notes.jsp" flush="true" />
             </div>
 
-            <div class="ui tab segment" data-tab="planned_features">planned_features
+            <div class="ui tab segment" data-tab="planned_features">
+                <h1 style="color: #B81D18">Features Planned for Future Releases</h1>
+                <hr class="horizontal" />
+                <br/>
                 <jsp:include page="pages/planned_features.jsp" flush="true" />
             </div>
 
-            <div class="ui tab segment" data-tab="request_features">request_features
+            <div class="ui tab segment" data-tab="request_features">
+                <h1 style="color: #B81D18">Request a New Site Feature</h1>
+                <hr class="horizontal" />
+                <br/>
                 <jsp:include page="pages/request_features.jsp" flush="true" />
             </div>
 
-            <div class="ui tab segment" data-tab="collective_resources">collective_resources
+            <div class="ui tab segment" data-tab="collective_resources">
+                <h1 style="color: #B81D18">Collective Resources</h1>
+                <hr class="horizontal" />
+                <br/>
                 <jsp:include page="pages/collective_resources.jsp" flush="true" />
             </div>
 
-            <div class="ui tab segment" data-tab="our_products">our_products
+            <div class="ui tab segment" data-tab="our_products">
+                <h1 style="color: #B81D18">Our Products</h1>
+                <hr class="horizontal" />
+                <br/>
                 <jsp:include page="pages/our_products.jsp" flush="true" />
             </div>
 
-            <div class="ui tab segment" data-tab="contact_us">contact_us
+            <div class="ui tab segment" data-tab="contact_us">
+                <h1 style="color: #B81D18">Contact Us (By 'Us' I mean me)</h1>
+                <hr class="horizontal" />
+                <br/>
                 <jsp:include page="pages/contact_us.jsp" flush="true" />
             </div>
 
-            <div class="ui tab segment" data-tab="about_the_author">about_the_author
+            <div class="ui tab segment" data-tab="about_the_author">
+                <h1 style="color: #B81D18">About the Author - Boris</h1>
+                <hr class="horizontal" />
+                <br/>
                 <jsp:include page="pages/about_the_author.jsp" flush="true" />
             </div>
 
-            <div class="ui tab segment" data-tab="articles">articles
+            <div class="ui tab segment" data-tab="articles">
+                <h1 style="color: #B81D18">Articles</h1>
+                <hr class="horizontal" />
+                <br/>
                 <jsp:include page="pages/articles.jsp" flush="true" />
             </div>
 
-            <div class="ui tab segment" data-tab="sample_files">sample_files
+            <div class="ui tab segment" data-tab="sample_files">
+                <h1 style="color: #B81D18">Sample Files</h1>
+                <hr class="horizontal" />
+                <br/>
                 <jsp:include page="pages/sample_files.jsp" flush="true" />
             </div>
 
-            <div class="ui tab segment" data-tab="how_to_videos">how_to_videos
+            <div class="ui tab segment" data-tab="how_to_videos">
+                <h1 style="color: #B81D18">How to save video tutorials for later viewing?</h1>
+                <hr class="horizontal" />
+                <br/>
                 <jsp:include page="pages/how_to_videos.jsp" flush="true" />
             </div>
 
-            <div class="ui tab segment" data-tab="how_to_soundcloud">how_to_soundcloud
+            <div class="ui tab segment" data-tab="how_to_soundcloud">
+                <h1 style="color: #B81D18">How to download our tracks?</h1>
+                <hr class="horizontal" />
+                <br/>
                 <jsp:include page="pages/how_to_soundcloud.jsp" flush="true" />
             </div>
 
-            <div class="ui tab segment" data-tab="spring_rest">spring_rest
+            <div class="ui tab segment" data-tab="spring_rest">
+                <h1 style="color: #B81D18">RESTful Web Services w/ Spring</h1>
+                <hr class="horizontal" />
+                <br/>
                 <jsp:include page="pages/spring_rest.jsp" flush="true" />
             </div>
 
-            <div class="ui tab segment" data-tab="databases">databases
+            <div class="ui tab segment" data-tab="databases">
+                <h1 style="color: #B81D18">All About Databases & SQL</h1>
+                <hr class="horizontal" />
+                <br/>
                 <jsp:include page="pages/databases.jsp" flush="true" />
             </div>
 
@@ -86,11 +125,17 @@
                 <jsp:include page="pages/ui_ux.jsp" flush="true" />
             </div>
 
-            <div class="ui tab segment" data-tab="practical_rest">practical_rest
+            <div class="ui tab segment" data-tab="practical_rest">
+                <h1 style="color: #B81D18">Getting Data via RESTful Call from MS SQL DB</h1>
+                <hr class="horizontal" />
+                <br/>
                 <jsp:include page="pages/rest_table_example.jsp" flush="true" />
             </div>
 
-            <div class="ui tab segment" data-tab="practical_js">practical_js
+            <div class="ui tab segment" data-tab="practical_js">
+                <h1 style="color: #B81D18">Pure JavaScript Example - Chess Game</h1>
+                <hr class="horizontal" />
+                <br/>
                 <jsp:include page="pages/practical_js.jsp" flush="true" />
             </div>
 
@@ -101,91 +146,157 @@
                 <jsp:include page="pages/converting_bases.jsp" flush="true" />
             </div>
 
-            <div class="ui tab segment" data-tab="ieee_754">ieee_754
+            <div class="ui tab segment" data-tab="ieee_754">
+                <h1 style="color: #B81D18">IEEE 754 Single and Double Precision</h1>
+                <hr class="horizontal" />
+                <br/>
                 <jsp:include page="pages/ieee_754.jsp" flush="true" />
             </div>
 
-            <div class="ui tab segment" data-tab="encoding_resources">encoding_resources
+            <div class="ui tab segment" data-tab="encoding_resources">
+                <h1 style="color: #B81D18">Encoding Related Resources</h1>
+                <hr class="horizontal" />
+                <br/>
                 <jsp:include page="pages/encoding_resources.jsp" flush="true" />
             </div>
 
-            <div class="ui tab segment" data-tab="binary">binary
+            <div class="ui tab segment" data-tab="binary">
+                <h1 style="color: #B81D18">All About Binary: +-*/ and more</h1>
+                <hr class="horizontal" />
+                <br/>
                 <jsp:include page="pages/binary.jsp" flush="true" />
             </div>
 
-            <div class="ui tab segment" data-tab="bitwise">bitwise
+            <div class="ui tab segment" data-tab="bitwise">
+                <h1 style="color: #B81D18">The Importance of Bitwise Operators</h1>
+                <hr class="horizontal" />
+                <br/>
                 <jsp:include page="pages/bitwise.jsp" flush="true" />
             </div>
 
-            <div class="ui tab segment" data-tab="basic_converter">basic_converter
+            <div class="ui tab segment" data-tab="basic_converter">
+                <h1 style="color: #B81D18">Basic C++ to MIPS32 Converter</h1>
+                <hr class="horizontal" />
+                <br/>
                 <jsp:include page="pages/basic_converter.jsp" flush="true" />
             </div>
 
-            <div class="ui tab segment" data-tab="mips_resources">mips_resources
+            <div class="ui tab segment" data-tab="mips_resources">
+                <h1 style="color: #B81D18">MIPS32 Resources</h1>
+                <hr class="horizontal" />
+                <br/>
                 <jsp:include page="pages/mips_resources.jsp" flush="true" />
             </div>
 
-            <div class="ui tab segment" data-tab="example_programs">example_programs
+            <div class="ui tab segment" data-tab="example_programs">
+                <h1 style="color: #B81D18">MIPS Example Programs</h1>
+                <hr class="horizontal" />
+                <br/>
                 <jsp:include page="pages/example_programs.jsp" flush="true" />
             </div>
 
-            <div class="ui tab segment" data-tab="neglected_diseases">neglected_diseases
+            <div class="ui tab segment" data-tab="neglected_diseases">
+                <h1 style="color: #B81D18">Neglected Diseases</h1>
+                <hr class="horizontal" />
+                <br/>
                 <jsp:include page="pages/neglected_diseases.jsp" flush="true" />
             </div>
 
-            <div class="ui tab segment" data-tab="senescence">senescence
+            <div class="ui tab segment" data-tab="senescence">
+                <h1 style="color: #B81D18">Senescence</h1>
+                <hr class="horizontal" />
+                <br/>
                 <jsp:include page="pages/senescence.jsp" flush="true" />
             </div>
 
-            <div class="ui tab segment" data-tab="how_to_contribute">how_to_contribute
+            <div class="ui tab segment" data-tab="how_to_contribute">
+                <h1 style="color: #B81D18">How to Contribute to Research</h1>
+                <hr class="horizontal" />
+                <br/>
                 <jsp:include page="pages/how_to_contribute.jsp" flush="true" />
             </div>
 
-            <div class="ui tab segment" data-tab="our_vision">our_vision
+            <div class="ui tab segment" data-tab="our_vision">
+                <h1 style="color: #B81D18">ADS' Goal</h1>
+                <hr class="horizontal" />
+                <br/>
                 <jsp:include page="pages/our_vision.jsp" flush="true" />
             </div>
 
-            <div class="ui tab segment" data-tab="scientific_photos">scientific_photos
+            <div class="ui tab segment" data-tab="scientific_photos">
+                <h1 style="color: #B81D18">Scientific Photos - Microscopy & Research</h1>
+                <hr class="horizontal" />
+                <br/>
                 <jsp:include page="pages/scientific_photos.jsp" flush="true" />
             </div>
 
-            <div class="ui tab segment" data-tab="natural_photos">natural_photos
+            <div class="ui tab segment" data-tab="natural_photos">
+                <h1 style="color: #B81D18">Natural and Artistic Photography</h1>
+                <hr class="horizontal" />
+                <br/>
                 <jsp:include page="pages/natural_photos.jsp" flush="true" />
             </div>
 
-            <div class="ui tab segment" data-tab="about_photos">about_photos
+            <div class="ui tab segment" data-tab="about_photos">
+                <h1 style="color: #B81D18">About Equipment and Technique</h1>
+                <hr class="horizontal" />
+                <br/>
                 <jsp:include page="pages/about_photos.jsp" flush="true" />
             </div>
 
-            <div class="ui tab segment" data-tab="development_tutorials">development_tutorials
+            <div class="ui tab segment" data-tab="development_tutorials">
+                <h1 style="color: #B81D18">Development Tutorials</h1>
+                <hr class="horizontal" />
+                <br/>
                 <jsp:include page="pages/development_tutorials.jsp" flush="true" />
             </div>
 
-            <div class="ui tab segment" data-tab="it_tutorials">it_tutorials
+            <div class="ui tab segment" data-tab="it_tutorials">
+                <h1 style="color: #B81D18">General IT Tutorials</h1>
+                <hr class="horizontal" />
+                <br/>
                 <jsp:include page="pages/it_tutorials.jsp" flush="true" />
             </div>
 
-            <div class="ui tab segment" data-tab="music_ambient">music_ambient
+            <div class="ui tab segment" data-tab="music_ambient">
+                <h1 style="color: #B81D18">Music and Ambient Sounds</h1>
+                <hr class="horizontal" />
+                <br/>
                 <jsp:include page="pages/music_ambient.jsp" flush="true" />
             </div>
 
-            <div class="ui tab segment" data-tab="gaming">gaming
+            <div class="ui tab segment" data-tab="gaming">
+                <h1 style="color: #B81D18">Gaming</h1>
+                <hr class="horizontal" />
+                <br/>
                 <jsp:include page="pages/gaming.jsp" flush="true" />
             </div>
 
-            <div class="ui tab segment" data-tab="other_vids">other_vids
+            <div class="ui tab segment" data-tab="other_vids">
+                <h1 style="color: #B81D18">Miscellaneous Videos</h1>
+                <hr class="horizontal" />
+                <br/>
                 <jsp:include page="pages/other_vids.jsp" flush="true" />
             </div>
 
-            <div class="ui tab segment" data-tab="policy_analysis">policy_analysis
+            <div class="ui tab segment" data-tab="policy_analysis">
+                <h1 style="color: #B81D18">Policy Analysis</h1>
+                <hr class="horizontal" />
+                <br/>
                 <jsp:include page="pages/policy_analysis.jsp" flush="true" />
             </div>
 
-            <div class="ui tab segment" data-tab="short_stories">short_stories
+            <div class="ui tab segment" data-tab="short_stories">
+                <h1 style="color: #B81D18">Short Stories</h1>
+                <hr class="horizontal" />
+                <br/>
                 <jsp:include page="pages/short_stories.jsp" flush="true" />
             </div>
 
-            <div class="ui tab segment" data-tab="it_development">it_development
+            <div class="ui tab segment" data-tab="it_development">
+                <h1 style="color: #B81D18">Development & IT Blog</h1>
+                <hr class="horizontal" />
+                <br/>
                 <jsp:include page="pages/it_development.jsp" flush="true" />
             </div>
         <jsp:include page="pages/footer.jsp" flush="true" />
