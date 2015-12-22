@@ -1,12 +1,11 @@
 <%--
   Created by IntelliJ IDEA.
   User: VZ9YFG
-  Date: 12/20/2015
-  Time: 4:01 PM
+  Date: 12/21/2015
+  Time: 8:29 PM
   To change this template use File | Settings | File Templates.
 --%>
 
-<div >
-    <p>Info about the author</p>
-</div>
+<div>
 
+</div>

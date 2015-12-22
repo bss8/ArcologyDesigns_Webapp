@@ -1,16 +1,13 @@
 <%--
   Created by IntelliJ IDEA.
-  User: VZ9YFG
-  Date: 12/19/2015
-  Time: 10:57 PM
-  To change this template use File | Settings | File Templates.
+  Date: 12/19/2015 @ 10:57 PM
 --%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+
 
 <%-- Add class 'tabular' to create a 3-sided border around tab items. --%>
 <%-- TODO: dimmmer is broken when 'tabular' class is added, the sidebar darkens as well --%>
 
-<div id="adsMainSidebar" class="ui sidebar vertical  demo menu left overlay visible">
+<div id="adsMainSidebar" class="ui sidebar vertical inverted demo menu left overlay visible">
 
     <div class="item">
         <a class="ui logo icon image" style="margin-left: -10px;">
@@ -27,7 +24,7 @@
         <div class="header">New in 0.1</div>
 
         <div class="menu">
-            <a class="active red item" data-tab="release_notes">Release Notes</a>
+            <a class="active inverted  item" data-tab="release_notes">Release Notes</a>
             <a class="blue item" data-tab="planned_features">Planned Features</a>
             <a class="green item" data-tab="request_features">Request Feature</a>
         </div>
