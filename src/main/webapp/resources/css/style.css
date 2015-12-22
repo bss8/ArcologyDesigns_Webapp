@@ -5,6 +5,13 @@
 
 /** { border: 1px solid red; }*/
 
+body {
+
+   /*  Dims background but highlights content area by leaving it #000 */
+   /*background: #F0F0F0;*/
+
+}
+
 #adsSidebarButton {
    cursor:pointer;
 }
@@ -37,4 +44,9 @@
 
 a {
    color: #004687;
+}
+
+#errmsg
+{
+   color: red;
 }

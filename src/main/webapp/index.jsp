@@ -94,7 +94,10 @@
                 <jsp:include page="pages/practical_js.jsp" flush="true" />
             </div>
 
-            <div class="ui tab segment" data-tab="converting_bases">converting_bases
+            <div class="ui tab segment" data-tab="converting_bases">
+                <h1 style="color: #B81D18">Converting From Base-n To Base-n</h1>
+                <hr class="horizontal" />
+                <br/>
                 <jsp:include page="pages/converting_bases.jsp" flush="true" />
             </div>
 
