@@ -5,6 +5,7 @@
 (function($){
    $(document).ready(function () {
 
+
       var dataSet = [];
       $.ajax({
          type: "GET",
@@ -26,9 +27,16 @@
                   { "data": "SUBJECT_OF_INTEREST" }
                ]
             } );
+            $('#adsProgress')
+                .progress('increment')
+            ;
          }
+
       });
 
+      $('#adsProgress')
+          .progress('increment')
+      ;
       // initialize tabs so they swap content
       $('.demo.menu .item').tab({history:false});
 
@@ -36,6 +44,12 @@
           // programmatically activating tab
           $.tab('change tab', 'tab name');
       });
+
+      $('.ui.dropdown')
+          .dropdown()
+      ;
+
+
 
       var input = document.getElementById("myInput");
 
@@ -63,6 +77,9 @@
          }  // end switch
       };
 
+      $('#adsProgress')
+          .progress('increment')
+      ;
    });  // end document.ready
 })(jQuery);  // end function($)
 
@@ -70,6 +87,7 @@ function toggleSidebar() {
    (function toggleSidebar($){
       $('#adsMainSidebar').sidebar('toggle');
       $('.ui.uncover.sidebar').css("z-index","200");
+      $('body').removeClass("pushable")
    })(jQuery);
 }
 

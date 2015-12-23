@@ -12,6 +12,7 @@
         <script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/jquery.dataTables.min.js"></script>
         <script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/ads-custom.js"></script>
 
+
         <style id="antiClickjack">body{display:none !important;}</style>
         <script type="text/javascript">
             if (self === top) {
@@ -28,7 +29,7 @@
         <jsp:include page="pages/sidebar_menu.jsp" flush="true" />
         <jsp:include page="pages/horizontal_menu.jsp" flush="true" />
 
-        <div class="main ui container" style="margin-left: 280px !important; width: 80%;">
+        <div class="main ui container" style="margin-left: 280px !important; width: auto; padding-right: 40px;">
 
             <div class="ui active tab segment" data-tab="release_notes" style="margin-top: 14px;">
                 <h1 class="siteHeaderRed">Converting From Base-n To Base-n <span style="float:right">RIGHT</span></h1>
@@ -299,7 +300,9 @@
                 <br/>
                 <jsp:include page="pages/it_development.jsp" flush="true" />
             </div>
+
         <jsp:include page="pages/footer.jsp" flush="true" />
+
     </body>
 </html>
 

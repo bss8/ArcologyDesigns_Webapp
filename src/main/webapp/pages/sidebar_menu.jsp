@@ -11,7 +11,7 @@
 
     <div class="item">
         <a class="ui logo icon image" style="margin-left: -10px;">
-            <img src="${pageContext.request.contextPath}/resources/images/ads_logo.png">
+            <img src="${pageContext.request.contextPath}/resources/images/adsl.gif">
         </a>
         <a href=""><b>ArcologyDesigns</b></a>
     </div>
@@ -137,3 +137,4 @@
 
     </div>
 </div>
+
