@@ -10,7 +10,7 @@ body {
    background: #F0F0F0;
 }
 .pushable { background: #F0F0F0 !important; }
-
+.ui.progress { margin: 1em 0; }
 #errmsg           { color: #B81D18; }
 .ui.vertical.menu { font-size: large; }
 .footerWidth      { width: 80%; }
@@ -23,6 +23,7 @@ body {
    height: 30px;
    text-align: center;
    border-radius: 5px;
+   width: 83.5%
 }
 
 .footerColor {
