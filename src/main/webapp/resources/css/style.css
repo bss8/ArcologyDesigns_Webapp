@@ -3,15 +3,17 @@
 * Contains custom application style & multi-resolution media queries
 */
 
-/** { border: 1px solid red; }*/
+/* FOR DEBUG ONLY: ALL BORDERS VISIBLE */
+/* * { border: 1px solid red; } */
 
-body {
-   /*  Dims background but highlights content area by leaving it #000 */
-   background: #F0F0F0;
-}
-.pushable { background: #F0F0F0 !important; }
-.ui.progress { margin: 1em 0; }
-#errmsg           { color: #B81D18; }
+/* Dims background but highlights content area by leaving it #000
+*  Removed .pushable using JQuery; dimming no longer works but that may be preferrable
+   TODO: investigate why dimmable breaks when removing .pushable from body el */
+body              { background: #F0F0F0; }
+a                 { color: #004687; cursor: pointer; }
+
+#integerErrorMsg  { color: #B81D18; }
+.ui.progress      { margin: 1em 0; }
 .ui.vertical.menu { font-size: large; }
 .footerWidth      { width: 80%; }
 .ui.inverted.menu { background: #004687; }
@@ -30,9 +32,4 @@ body {
    color: mintcream;
    background: #004687;
    overflow: hidden;
-}
-
-a {
-   color: #004687;
-   cursor: pointer;
 }

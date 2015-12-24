@@ -26,8 +26,8 @@
     </head>
     <body>
 
-        <jsp:include page="pages/sidebar_menu.jsp" flush="true" />
-        <jsp:include page="pages/horizontal_menu.jsp" flush="true" />
+        <jsp:include page="pages/0_core/sidebar_menu.jsp" flush="true" />
+        <jsp:include page="pages/0_core/horizontal_menu.jsp" flush="true" />
 
         <div class="main ui container" style="margin-left: 280px !important; width: auto; padding-right: 40px;">
 
@@ -301,7 +301,7 @@
                 <jsp:include page="pages/it_development.jsp" flush="true" />
             </div>
 
-        <jsp:include page="pages/footer.jsp" flush="true" />
+        <jsp:include page="pages/0_core/footer.jsp" flush="true" />
 
     </body>
 </html>
