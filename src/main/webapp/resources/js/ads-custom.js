@@ -110,7 +110,7 @@
                return true;
                break;
             default:
-               $("#integerErrorMsg").html("+/- Integers Only").show().fadeOut("800");
+               $("#integerErrorMsg").html("+/- Integers Only").show().fadeOut(1000);
                return false;
                break;
          }  // end switch

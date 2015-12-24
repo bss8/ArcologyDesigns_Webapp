@@ -11,7 +11,7 @@
         <a class="item" data-tab="second">Second</a>
         <a class="item" data-tab="third">Third</a>
     </div>
-    <div class="ui tab segment active" data-tab="first">
+    <div class="ui tab segment active" data-tab="first" style="padding-top: 0; border: none;">
         <div class="ui top attached tabular menu">
             <a class="item" data-tab="first/a">1A</a>
             <a class="item active" data-tab="first/b">1B</a>

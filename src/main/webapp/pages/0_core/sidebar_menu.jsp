@@ -10,10 +10,9 @@
 <div id="adsMainSidebar" class="ui sidebar vertical inverted demo menu left overlay visible">
 
     <div class="item">
-        <a class="ui logo icon image" style="margin-left: -10px;">
-            <img src="${pageContext.request.contextPath}/resources/images/adsl.gif">
+        <a class="ui logo icon image" style="background:  #f0f0f0; border-radius: 30%; ">
+            <img src="${pageContext.request.contextPath}/resources/images/red_ads_logo.gif">
         </a>
-        <a href=""><b>ArcologyDesigns</b></a>
     </div>
 
     <a class="item" >

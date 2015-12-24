@@ -6,7 +6,8 @@
   To change this template use File | Settings | File Templates.
 --%>
 
-<div class="ui masthead vertical segment" style="margin-left: 280px;">
+<div class="ui masthead vertical segment"
+     style="margin-left: 280px; margin-bottom: 0; padding-bottom: 0; border: none;">
 
     <div class="ui menu" style="margin-right: 40px;">
         <a class="view-ui item" onclick="toggleSidebar()" >
