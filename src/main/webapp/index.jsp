@@ -25,7 +25,11 @@
 
     </head>
     <body>
-    <input type="button" value = "Test the alert" onclick="alert('Alert this pages');" style="margin-left:280px;"/>
+
+    <%-- Utilizes custom alert code and functionality
+         TODO: Determine if worth effort and if anything is gainded by this if modals are available --%>
+    <%--<input type="button" value = "Test the alert" onclick="alert('Alert this pages');" style="margin-left:280px;"/>--%>
+
         <jsp:include page="pages/0_core/sidebar_menu.jsp" flush="true" />
         <jsp:include page="pages/0_core/horizontal_menu.jsp" flush="true" />
 

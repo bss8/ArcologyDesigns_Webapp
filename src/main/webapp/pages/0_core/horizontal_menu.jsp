@@ -54,7 +54,9 @@
     </div>
 </div>
 
-<div class="ui small red progress" id="adsProgress" data-value="0" data-total="3"
+<div class="ui small red active progress" id="adsProgress" data-value="0" data-total="3"
      style="margin-left: 280px; width: auto; margin-right: 40px;">
-    <div class="bar"></div>
+    <div class="bar">
+        <div class="progress"></div>
+    </div>
 </div>

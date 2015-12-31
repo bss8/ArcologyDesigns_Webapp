@@ -12,7 +12,7 @@ var adblockInterference = true;
       $.ajax({
          type: "GET",
          dataType: "json",
-         url: "/ads-webapp/azureTest",
+         url: "/welcome/azureTest",
          success: function(data){
             //alert(JSON.stringify(data));
             dataSet = data.arrayName;
@@ -40,8 +40,6 @@ var adblockInterference = true;
       $('.demo.menu .item').tab({history:false});
       $('.testContent.menu .item').tab({history:false});
 
-      $('#context1 .menu .item').tab({ context: $('#context1') });
-      $('#context2 .menu .item').tab({ context: $('#context2') });
       $('#context1 .menu .item').tab({ context: $('#context1') });
       $('#context2 .menu .item').tab({ context: $('#context2') });
       $('#context3 .menu .item').tab({ context: $('#context3') });
@@ -132,6 +130,13 @@ function toggleSidebar() {
 function dec2bin(dec){
    return (dec >>> 0).toString(2);
 }
+
+
+
+
+
+
+
 
 
 // CUSTOM ALERT CODE
