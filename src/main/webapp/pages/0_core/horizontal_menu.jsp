@@ -1,9 +1,5 @@
 <%--
-  Created by IntelliJ IDEA.
-  User: VZ9YFG
-  Date: 12/19/2015
-  Time: 11:03 PM
-  To change this template use File | Settings | File Templates.
+  User: Boris  Date: 12/19/2015 @ 11:03 PM
 --%>
 
 <div class="ui masthead vertical segment"

@@ -1,9 +1,6 @@
 <%--
-  Created by IntelliJ IDEA.
-  User: VZ9YFG
-  Date: 12/19/2015
-  Time: 10:50 PM
-  To change this template use File | Settings | File Templates.
+  User: Boris
+  Date: 12/19/2015  @ 10:50 PM
 --%>
 <div id="context2">
     <div class="ui secondary menu">

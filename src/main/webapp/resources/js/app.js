@@ -1,5 +1,5 @@
 /**
- * Created by VZ9YFG on 12/19/2015.
+ * Created by Boris on 12/19/2015.
  */
 var adblockInterference = true;
 (function($){

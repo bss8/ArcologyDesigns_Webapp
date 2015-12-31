@@ -2160,7 +2160,7 @@ i.icon.shutdown:before {
 i.icon.clock:before {
   content: "\f017";
 }
-i.icon.time:before {
+i.icon.@before {
   content: "\f017";
 }
 i.icon.play.circle.outline:before {
