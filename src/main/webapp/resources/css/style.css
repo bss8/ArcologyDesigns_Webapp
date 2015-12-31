@@ -108,6 +108,11 @@ a                 { color: #004687; cursor: pointer; }
    font:0.7em verdana,arial;
 }
 
+.ui.progress.success .bar {
+   background-color: #004687 !important;
+}
+
+
 /*h1,h2 {*/
    /*margin:0;*/
    /*padding:4px;*/
@@ -544,3 +549,5 @@ body {
 .double-start::-webkit-scrollbar-button:end { display: none; }
 .double-both::-webkit-scrollbar-button { display: block; }
 .none::-webkit-scrollbar-button { display: none; }
+
+/* NOTHING BELOW THIS LINE */

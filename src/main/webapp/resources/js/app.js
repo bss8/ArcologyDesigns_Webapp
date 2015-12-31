@@ -33,7 +33,13 @@ var adblockInterference = true;
             for(var p = 0; p < 3; p++)
                $('#adsProgress').progress('increment');
          }
+      });
 
+
+      $('.conversion_form .dropdown').dropdown('set selected', ['b2', 'b3']);
+
+      $('.conversion_form .button').on('click', function() {
+         $('.conversion_form .ui.dropdown').dropdown('clear');
       });
 
       // initialize tabs so they swap content
@@ -90,7 +96,7 @@ var adblockInterference = true;
       $('.ui.dropdown').dropdown();
       $('#adsProgress').progress('increment');
 
-      var input = document.getElementById("myInput");
+      var input = document.getElementById("integer_input");
 
       input.onkeypress = function(e) {
          switch (e.keyCode){
