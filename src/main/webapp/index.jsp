@@ -10,7 +10,7 @@
         <script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/jquery-2.1.4.js"></script>
         <script type="text/javascript" src="${pageContext.request.contextPath}/resources/semantic-ui/dist/semantic.min.js"></script>
         <script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/jquery.dataTables.min.js"></script>
-        <script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/ads-custom.js"></script>
+        <script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/app.js"></script>
 
 
         <style id="antiClickjack">body{display:none !important;}</style>
@@ -25,7 +25,7 @@
 
     </head>
     <body>
-
+    <input type="button" value = "Test the alert" onclick="alert('Alert this pages');" style="margin-left:280px;"/>
         <jsp:include page="pages/0_core/sidebar_menu.jsp" flush="true" />
         <jsp:include page="pages/0_core/horizontal_menu.jsp" flush="true" />
 
@@ -304,6 +304,18 @@
         <jsp:include page="pages/0_core/footer.jsp" flush="true" />
 
     </body>
+
+    <script>
+        if( window.adblockInterference === undefined ){
+            // adblocker detected, show fallback
+            alert("There are NO ADS on this site (I hate ads)\n" +
+                    "But AdBlock disables JavaScript files. \n" +
+                    "For site functionality to work, please WHITELIST this domain or DISABLE AdBlock on this site. \n" +
+                    "Again...NOOO ADS HERE, EVER!");
+        }
+    </script>
+
+    <jsp:include page="pages/modals/initial_settings.jsp" flush="true" />
 </html>
 
 
