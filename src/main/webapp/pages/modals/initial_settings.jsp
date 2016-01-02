@@ -2,7 +2,7 @@
   User: Boris - Date: 12/23/2015 @ 11:38 PM
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<div class="ui basic modal">
+<div id="initial_settings_config" class="ui basic modal">
     <i class="close icon"></i>
     <div class="header">
         Archive Old Messages

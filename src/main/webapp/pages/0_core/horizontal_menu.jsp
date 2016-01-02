@@ -6,8 +6,9 @@
      style="margin-left: 280px; margin-bottom: 0; padding-bottom: 0; border: none;">
 
     <div class="ui menu" style="margin-right: 40px;">
-        <a class="view-ui item" onclick="toggleSidebar()" >
-            <i class="sidebar icon"></i> Menu
+        <a id="sidebar_toggle" class="view-ui item" data-content="To anchor/pin the sidebar menu, refresh the page (F5)" data-variation="wide inverted large"
+           onclick="toggleSidebar()" >
+            <i class="sidebar icon" ></i> Menu
         </a>
         <a class="item">
             Home

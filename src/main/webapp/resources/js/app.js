@@ -4,10 +4,41 @@
 var adblockInterference = true;
 (function($){
    $(document).ready(function () {
-      // TODO: enable cookies or local storage to preserve theme selection and
-      // TODO: only query user for info on first load. Do not show modal if selection has been made.
-      $('.ui.basic.modal').modal('show');
 
+
+
+      // TODO: 1. enable cookies or local storage to preserve theme selection and
+      // TODO:    only query user for info on first load. Do not show modal if selection has been made previously.
+      // TODO: 2. create menu item that allows resetting of visitedBefore variable
+      if(typeof(Storage) !== "undefined") {
+         // Code for localStorage/sessionStorage.
+         var visitedBefore = localStorage.getItem("visitedBefore");
+         console.log("var visitedBefore = ", visitedBefore);
+
+         if(visitedBefore == undefined) {
+            localStorage.setItem("visitedBefore", true);
+            visitedBefore = true;
+            //$('.ui.basic.modal').modal('show');   // Alternate selection method with classes
+            $('#initial_settings_config').modal('show');
+         }
+      } else {
+         // Sorry! No Web Storage support..
+         console.warn("NO LOCAL STORAGE SUPPORT!");
+      }
+
+
+      $('#sidebar_toggle').popup({
+          //inline   : true,
+          hoverable: true,
+          position : 'bottom left',
+          delay: {
+             show: 200,
+             hide: 500
+          }
+      });
+
+
+      // Get data from MS DB via HTTP GET Ajax call
       var dataSet = [];
       $.ajax({
          type: "GET",
@@ -120,7 +151,10 @@ var adblockInterference = true;
                return false;
                break;
          }  // end switch
-      };
+      };  // end onkeypress
+
+
+
 
    });  // end document.ready
 })(jQuery);  // end function($)
@@ -146,7 +180,7 @@ function dec2bin(dec){
 
 
 // CUSTOM ALERT CODE
-
+/*
 var ALERT_TITLE = "Oops!";
 var ALERT_BUTTON_TEXT = "Ok";
 
@@ -195,3 +229,4 @@ function removeCustomAlert() {
 function ful(){
    alert('Alert this pages');
 }
+    */
