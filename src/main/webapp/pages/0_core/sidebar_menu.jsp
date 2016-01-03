@@ -46,8 +46,7 @@
         <div class="menu">
             <a class="red item" data-tab="articles">Articles</a>
             <a class="blue item" data-tab="sample_files">Sample IT Files</a>
-            <a class="green item" data-tab="how_to_videos">How To DL - Videos</a>
-            <a class="violet item" data-tab="how_to_soundcloud">How to DL - SoundCloud</a>
+            <a class="green item" data-tab="how_to_videos">How-to DL: Audio / Video</a>
         </div>
 
     </div>

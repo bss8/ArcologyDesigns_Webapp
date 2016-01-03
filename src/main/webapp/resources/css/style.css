@@ -13,6 +13,11 @@
 
 body              { background: #B6B6B6; }
 a                 { cursor: pointer; }
+hr {
+   border-style: double;
+   border-width: 4px;
+   color: #B81D18;
+}
 
 #integerErrorMsg  { color: #B81D18; }
 .ui.progress      { margin: 1em 0; }
