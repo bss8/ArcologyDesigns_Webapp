@@ -16,7 +16,7 @@
     </div>
 
     <a class="item" >
-        <b>Functionality &nbsp;&nbsp;&nbsp;&nbsp;<i class="pointing down icon"></i></b>
+        <b>Site Content &nbsp;&nbsp;&nbsp;&nbsp;<i class="pointing down icon"></i></b>
     </a>
 
     <div class="item">
@@ -59,8 +59,12 @@
             <a class="red item" data-tab="spring_rest">Spring REST</a>
             <a class="blue item" data-tab="databases">Databases</a>
             <a class="green item" data-tab="ui_ux">UX/UI</a>
-            <a class="violet item" data-tab="practical_rest">Practical Examples - REST</a>
-            <a class="orange item" data-tab="practical_js">Practical Examples - JavaScript</a>
+            <a class="green item" data-tab="ui_ux">Build Automation</a>
+            <a class="green item" data-tab="ui_ux">Algorithms</a>
+            <a class="violet item" data-tab="practical_rest">Practical Ex. - REST</a>
+            <a class="orange item" data-tab="practical_js">Practical Ex. - JavaScript</a>
+            <a class="orange item" data-tab="practical_js">Practical Ex. - Java Client</a>
+            <a class="orange item" data-tab="practical_js">Practical Ex. - C++ Client</a>
         </div>
 
     </div>
@@ -73,7 +77,7 @@
             <a class="blue item" data-tab="ieee_754">IEEE 754 SP & DP</a>
             <a class="green item" data-tab="encoding_resources">Resources</a>
             <a class="violet item" data-tab="binary">All About Binary</a>
-            <a class="orange item" data-tab="bitwise">Bitwise Ops</a>
+            <a class="orange item" data-tab="bitwise">Bitwise Operations</a>
         </div>
 
     </div>
@@ -90,13 +94,37 @@
     </div>
 
     <div class="item">
+        <div class=" header">Soft. Architecture &nbsp;&nbsp;&nbsp;&nbsp;<i class="university icon"></i></div>
+
+        <div class="menu">
+            <a class="red item" data-tab="">Web Applications</a>
+            <a class="blue item" data-tab="">Client Applications</a>
+            <a class="violet item" data-tab="">My Design Philosophy</a>
+            <a class="orange item" data-tab="">Resources</a>
+        </div>
+
+    </div>
+
+    <div class="item">
+        <div class=" header">Web Applications &nbsp;&nbsp;&nbsp;&nbsp;<i class="browser icon"></i></div>
+
+        <div class="menu">
+            <a class="red item" data-tab="">Java Technology Stack</a>
+            <a class="blue item" data-tab="">.NET Technology Stack</a>
+            <a class="violet item" data-tab="">Web Application vs Site</a>
+            <a class="orange item" data-tab="">Resources</a>
+        </div>
+
+    </div>
+
+    <div class="item">
         <div class=" header">Disease Research &nbsp;&nbsp;&nbsp;&nbsp;<i class="doctor icon"></i></div>
 
         <div class="menu">
             <a class="red item" data-tab="neglected_diseases">Neglected Diseases</a>
             <a class="blue item" data-tab="senescence">Senescence</a>
             <a class="green item" data-tab="how_to_contribute">How to Contribute</a>
-            <a class="violet item" data-tab="our_vision">Our Vision</a>
+            <a class="violet item" data-tab="our_vision">My Vision</a>
         </div>
 
     </div>
@@ -106,8 +134,8 @@
 
         <div class="menu">
             <a class="red item" data-tab="scientific_photos">Scientific</a>
-            <a class="blue item" data-tab="natural_photos">Natural/Artistic</a>
-            <a class="green item" data-tab="about_photos">About equipment/process</a>
+            <a class="blue item" data-tab="natural_photos">Natural / Artistic</a>
+            <a class="green item" data-tab="about_photos">Equipment & Process</a>
         </div>
 
     </div>

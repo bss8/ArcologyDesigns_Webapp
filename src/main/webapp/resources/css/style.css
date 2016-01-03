@@ -8,7 +8,9 @@
 
 /* Dims background but highlights content area by leaving it #000
 *  Removed .pushable using JQuery; dimming no longer works but that may be preferrable
-   TODO: investigate why dimmable breaks when removing .pushable from body el */
+*  TODO: investigate why dimmable breaks when removing .pushable from body el
+*/
+
 body              { background: #B6B6B6; }
 a                 { cursor: pointer; }
 
@@ -548,4 +550,6 @@ body {
 .double-both::-webkit-scrollbar-button { display: block; }
 .none::-webkit-scrollbar-button { display: none; }
 
+/* NOTHING BELOW THIS LINE */
+/* NOTHING BELOW THIS LINE */
 /* NOTHING BELOW THIS LINE */

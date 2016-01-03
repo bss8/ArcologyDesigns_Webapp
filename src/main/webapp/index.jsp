@@ -126,7 +126,7 @@
                 <jsp:include page="pages/databases.jsp" flush="true" />
             </div>
 
-            <div class="ui tab segment" data-tab="ui_ux">ui_ux
+            <div class="ui tab segment" data-tab="ui_ux">
                 <jsp:include page="pages/ui_ux.jsp" flush="true" />
             </div>
 

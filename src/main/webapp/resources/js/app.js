@@ -10,6 +10,9 @@ var adblockInterference = true;
       // TODO: 1. enable cookies or local storage to preserve theme selection and
       // TODO:    only query user for info on first load. Do not show modal if selection has been made previously.
       // TODO: 2. create menu item that allows resetting of visitedBefore variable
+      // TODO: 3. provide users with option to change site style:
+      // TODO:    remove '.inverted' from sidebar (changes to white and shows colors)
+
       if(typeof(Storage) !== "undefined") {
          // Code for localStorage/sessionStorage.
          var visitedBefore = localStorage.getItem("visitedBefore");
@@ -163,7 +166,7 @@ function toggleSidebar() {
    (function toggleSidebar($){
       $('#adsMainSidebar').sidebar('toggle');
       $('.ui.uncover.sidebar').css("z-index","200");
-      $('body').removeClass("pushable")
+      $('body').removeClass("pushable");
    })(jQuery);
 }
 
