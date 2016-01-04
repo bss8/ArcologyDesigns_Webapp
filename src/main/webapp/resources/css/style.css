@@ -13,11 +13,7 @@
 
 body              { background: #B6B6B6; }
 a                 { cursor: pointer; }
-hr {
-   border-style: double;
-   border-width: 4px;
-   color: #B81D18;
-}
+
 
 #integerErrorMsg  { color: #B81D18; }
 .ui.progress      { margin: 1em 0; }
@@ -25,7 +21,11 @@ hr {
 .footerWidth      { width: 80%; }
 .ui.inverted.menu { background: #004687; }
 .siteHeaderColor    { color: #B81D18; }
-
+.custom_hr_style {
+   border-style: double;
+   border-width: 4px;
+   color: #B81D18;
+}
 .ui.progress.success .bar {
    background-color: #008741 !important;
 }

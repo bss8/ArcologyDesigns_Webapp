@@ -7,6 +7,7 @@
         <a class="item active" data-tab="first">Frameworks and why they matter</a>
         <a class="item" data-tab="second">Simplicity & Color Theory</a>
         <a class="item" data-tab="third">Custom Components</a>
+        <a class="item" data-tab="fourth">HTML5 &nbsp;<i class="html5 icon"></i> || CSS3 &nbsp;<i class="css3 icon"></i></a>
     </div>
     <div class="ui tab segment active" data-tab="first">
         <div class="ui top attached tabular menu">
@@ -37,5 +38,13 @@
         <div class="ui bottom attached tab segment active" data-tab="third/a">3A</div>
         <div class="ui bottom attached tab segment" data-tab="third/b">3B</div>
         <div class="ui bottom attached tab segment" data-tab="third/c">3C</div>
+    </div>
+    <div class="ui tab segment " data-tab="fourth">
+        <div class="ui top attached tabular menu">
+            <a class="item active" data-tab="fourth/a">HTML5 &nbsp;<i class="html5 icon large"></i></a>
+            <a class="item" data-tab="fourth/b">CSS3 &nbsp;<i class="css3 icon large"></i></a>
+        </div>
+        <div class="ui bottom attached tab segment active" data-tab="fourth/a">4A</div>
+        <div class="ui bottom attached tab segment" data-tab="fourth/b">4B</div>
     </div>
 </div>
