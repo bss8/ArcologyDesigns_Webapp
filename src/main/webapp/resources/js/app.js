@@ -64,7 +64,7 @@ var adblockInterference = true;
                ]
             } );
 
-            for(var p = 0; p < 3; p++)
+            for(var p = 0; p < 4; p++)
                $('#adsProgress').progress('increment');
          }
       });
