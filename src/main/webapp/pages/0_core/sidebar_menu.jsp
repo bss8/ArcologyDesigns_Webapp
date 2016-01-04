@@ -58,12 +58,12 @@
             <a class="red item" data-tab="spring_rest">Spring REST</a>
             <a class="blue item" data-tab="databases">Databases</a>
             <a class="green item" data-tab="ui_ux">UX/UI</a>
-            <a class="green item" data-tab="ui_ux">Build Automation</a>
-            <a class="green item" data-tab="ui_ux">Algorithms</a>
+            <a class="green item" data-tab="build_automation">Build Automation</a>
+            <a class="green item" data-tab="algorithms">Algorithms</a>
             <a class="violet item" data-tab="practical_rest">Practical Ex. - REST</a>
             <a class="orange item" data-tab="practical_js">Practical Ex. - JavaScript</a>
-            <a class="orange item" data-tab="practical_js">Practical Ex. - Java Client</a>
-            <a class="orange item" data-tab="practical_js">Practical Ex. - C++ Client</a>
+            <a class="orange item" data-tab="practical_java">Practical Ex. - Java Client</a>
+            <a class="orange item" data-tab="practical_cpp">Practical Ex. - C++ Client</a>
         </div>
 
     </div>
@@ -96,10 +96,10 @@
         <div class=" header">Soft. Architecture &nbsp;&nbsp;&nbsp;&nbsp;<i class="university icon"></i></div>
 
         <div class="menu">
-            <a class="red item" data-tab="">Web Applications</a>
-            <a class="blue item" data-tab="">Client Applications</a>
-            <a class="violet item" data-tab="">My Design Philosophy</a>
-            <a class="orange item" data-tab="">Resources</a>
+            <a class="red item" data-tab="web_applications">Web Applications</a>
+            <a class="blue item" data-tab="client_applications">Client Applications</a>
+            <a class="violet item" data-tab="design_philosophy">My Design Philosophy</a>
+            <a class="orange item" data-tab="architecture_resources">Resources</a>
         </div>
 
     </div>
@@ -108,10 +108,10 @@
         <div class=" header">Web Applications &nbsp;&nbsp;&nbsp;&nbsp;<i class="browser icon"></i></div>
 
         <div class="menu">
-            <a class="red item" data-tab="">Java Technology Stack</a>
-            <a class="blue item" data-tab="">.NET Technology Stack</a>
-            <a class="violet item" data-tab="">Web Application vs Site</a>
-            <a class="orange item" data-tab="">Resources</a>
+            <a class="red item" data-tab="java_stack">Java Technology Stack</a>
+            <a class="blue item" data-tab="dot_net_stack">.NET Technology Stack</a>
+            <a class="violet item" data-tab="app_vs_site">Web Application vs Site</a>
+            <a class="orange item" data-tab="web_app_resources">Resources</a>
         </div>
 
     </div>
