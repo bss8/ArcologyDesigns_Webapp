@@ -120,7 +120,24 @@
             </div>
 
             <div class="ui tab segment" data-tab="ui_ux">
+                <h1 class="siteHeaderColor">User Interface and Experience</h1>
+                <hr />
+
                 <jsp:include page="pages/ui_ux.jsp" flush="true" />
+            </div>
+
+            <div class="ui tab segment" data-tab="build_automation">
+                <h1 class="siteHeaderColor">Build Automation Tools</h1>
+                <hr />
+
+                <jsp:include page="pages/build_automation.jsp" flush="true" />
+            </div>
+
+            <div class="ui tab segment" data-tab="algorithms">
+                <h1 class="siteHeaderColor">Algorithms</h1>
+                <hr />
+
+                <jsp:include page="pages/algorithms.jsp" flush="true" />
             </div>
 
             <div class="ui tab segment" data-tab="practical_rest">
@@ -135,6 +152,20 @@
                 <hr />
                
                 <jsp:include page="pages/practical_js.jsp" flush="true" />
+            </div>
+
+            <div class="ui tab segment" data-tab="practical_java">
+                <h1 class="siteHeaderColor">Java Example</h1>
+                <hr />
+
+                <jsp:include page="pages/practical_java.jsp" flush="true" />
+            </div>
+
+            <div class="ui tab segment" data-tab="practical_cpp">
+                <h1 class="siteHeaderColor">C++ Example</h1>
+                <hr />
+
+                <jsp:include page="pages/practical_cpp.jsp" flush="true" />
             </div>
 
             <div class="ui tab segment" data-tab="converting_bases">
@@ -191,6 +222,62 @@
                 <hr />
                
                 <jsp:include page="pages/example_programs.jsp" flush="true" />
+            </div>
+
+            <div class="ui tab segment" data-tab="web_applications">
+                <h1 class="siteHeaderColor">Web Applications Design</h1>
+                <hr />
+
+                <jsp:include page="pages/neglected_diseases.jsp" flush="true" />
+            </div>
+
+            <div class="ui tab segment" data-tab="client_applications">
+                <h1 class="siteHeaderColor">Client Applications</h1>
+                <hr />
+
+                <jsp:include page="pages/client_applications.jsp" flush="true" />
+            </div>
+
+            <div class="ui tab segment" data-tab="design_philosophy">
+                <h1 class="siteHeaderColor">My Design Philosophy</h1>
+                <hr />
+
+                <jsp:include page="pages/design_philosophy.jsp" flush="true" />
+            </div>
+
+            <div class="ui tab segment" data-tab="architecture_resources">
+                <h1 class="siteHeaderColor">Architecture Related Resources</h1>
+                <hr />
+
+                <jsp:include page="pages/architecture_resources.jsp" flush="true" />
+            </div>
+
+            <div class="ui tab segment" data-tab="java_stack">
+                <h1 class="siteHeaderColor">J2EE Technology Stack</h1>
+                <hr />
+
+                <jsp:include page="pages/java_stack.jsp" flush="true" />
+            </div>
+
+            <div class="ui tab segment" data-tab="dot_net_stack">
+                <h1 class="siteHeaderColor">.NET Technology Stack</h1>
+                <hr />
+
+                <jsp:include page="pages/dot_net_stack.jsp" flush="true" />
+            </div>
+
+            <div class="ui tab segment" data-tab="app_vs_site">
+                <h1 class="siteHeaderColor">How is a website different from a web application?</h1>
+                <hr />
+
+                <jsp:include page="pages/app_vs_site.jsp" flush="true" />
+            </div>
+
+            <div class="ui tab segment" data-tab="web_app_resources">
+                <h1 class="siteHeaderColor">Resources for Web Apps</h1>
+                <hr />
+
+                <jsp:include page="pages/web_app_resources.jsp" flush="true" />
             </div>
 
             <div class="ui tab segment" data-tab="neglected_diseases">

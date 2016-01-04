@@ -119,6 +119,17 @@ var adblockInterference = true;
       $('#context37 .menu .item').tab({ context: $('#context37') });
       $('#context38 .menu .item').tab({ context: $('#context38') });
       $('#context39 .menu .item').tab({ context: $('#context39') });
+      $('#context40 .menu .item').tab({ context: $('#context40') });
+      $('#context41 .menu .item').tab({ context: $('#context41') });
+      $('#context42 .menu .item').tab({ context: $('#context42') });
+      $('#context43 .menu .item').tab({ context: $('#context43') });
+      $('#context44 .menu .item').tab({ context: $('#context44') });
+      $('#context45 .menu .item').tab({ context: $('#context45') });
+      $('#context46 .menu .item').tab({ context: $('#context46') });
+      $('#context47 .menu .item').tab({ context: $('#context47') });
+      $('#context48 .menu .item').tab({ context: $('#context48') });
+      $('#context49 .menu .item').tab({ context: $('#context49') });
+
 
       $('#adsProgress').progress('increment');
 
