@@ -25,7 +25,8 @@
                         <div>
                             <label for="integer_input" class="label">Enter an integer: </label>
                             <br/>
-                            <input type="number" maxlength="20" id="integer_input" class="input" style="height:30px;font-size: 16pt;">  &nbsp;<span id="integerErrorMsg"></span>
+                            <input type="number" maxlength="20" id="integer_input" class="input"
+                                    style="height:30px;font-size: 16pt;">  &nbsp;<span id="integerErrorMsg"></span>
                         </div>
                     </div>
                     <div class="one wide column"></div>
@@ -47,6 +48,7 @@
                             <option value="b13">Base-13</option>
                             <option value="b14">Base-14</option>
                             <option value="b15">Base-15</option>
+                            <option value="b15">Base-16 (hex)</option>
                         </select>
                     </div>
 
