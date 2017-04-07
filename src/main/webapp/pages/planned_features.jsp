@@ -4,40 +4,84 @@
 --%>
 
 <div id="context29">
-    <div class="ui secondary menu">
-        <a class="item active" data-tab="first">First</a>
-        <a class="item" data-tab="second">Second</a>
-        <a class="item" data-tab="third">Third</a>
-    </div>
-    <div class="ui tab segment active" data-tab="first">
-        <div class="ui top attached tabular menu">
-            <a class="item" data-tab="first/a">1A</a>
-            <a class="item active" data-tab="first/b">1B</a>
-            <a class="item" data-tab="first/c">1C</a>
+    <button id="hide">Hide</button>
+    <button id="show">Show</button>
+    <p class="onlyme">If you click on the "Hide" button, I will disappear.</p>
+    <p class="notme">If you click on the "Hide" button, I will NOT disappear.</p>
+
+    <div class="ui middle aligned divided list notstarted">
+        <div class="item ">
+            <div class="right floated content">
+                <div class="ui button black">Not Started</div>
+            </div>
+            <div class="content">
+                HTTPS for web app and databases
+            </div>
         </div>
-        <div class="ui bottom attached tab segment" data-tab="first/a">1A</div>
-        <div class="ui bottom attached tab segment active" data-tab="first/b">1B</div>
-        <div class="ui bottom attached tab segment" data-tab="first/c">1C</div>
-    </div>
-    <div class="ui tab segment" data-tab="second">
-        <div class="ui top attached tabular menu">
-            <a class="item active" data-tab="second/a">2A</a>
-            <a class="item" data-tab="second/b">2B</a>
-            <a class="item" data-tab="second/c">2C</a>
+        <div class="item">
+            <div class="right floated content">
+                <div class="ui button black">Not Started</div>
+            </div>
+            <div class="content">
+                robots.txt and Google site verification for indexing
+            </div>
         </div>
-        <div class="ui bottom attached tab segment active" data-tab="second/a">2A</div>
-        <div class="ui bottom attached tab segment" data-tab="second/b">2B</div>
-        <div class="ui bottom attached tab segment" data-tab="second/c">2C</div>
-    </div>
-    <div class="ui tab segment" data-tab="third">
-        <div class="ui top attached tabular menu">
-            <a class="item active" data-tab="third/a">3A</a>
-            <a class="item" data-tab="third/b">3B</a>
-            <a class="item" data-tab="third/c">3C</a>
+        <div class="item">
+            <div class="right floated content">
+                <div class="ui button black">Not Started</div>
+            </div>
+            <div class="content">
+                MariaDB connection and example
+            </div>
         </div>
-        <div class="ui bottom attached tab segment active" data-tab="third/a">3A</div>
-        <div class="ui bottom attached tab segment" data-tab="third/b">3B</div>
-        <div class="ui bottom attached tab segment" data-tab="third/c">3C</div>
+        <div class="item">
+            <div class="right floated content">
+                <div class="ui button black">Not Started</div>
+            </div>
+            <div class="content">
+                Change generic logo to owl
+            </div>
+        </div>
+        <div class="item">
+            <div class="right floated content">
+                <div class="ui button black">Not Started</div>
+            </div>
+            <div class="content">
+                Make previous downloads and articles available
+            </div>
+        </div>
+        <div class="item">
+            <div class="right floated content">
+                <div class="ui button orange">In Progress</div>
+            </div>
+            <div class="content">
+                Base converter calculator
+            </div>
+        </div>
+        <div class="item">
+            <div class="right floated content">
+                <div class="ui button black">Not Started</div>
+            </div>
+            <div class="content">
+                Email sign-up list
+            </div>
+        </div>
+        <div class="item">
+            <div class="right floated content">
+                <div class="ui button black">Not Started</div>
+            </div>
+            <div class="content">
+                Monthly newsletter
+            </div>
+        </div>
+        <div class="item">
+            <div class="right floated content">
+                <div class="ui button black">Not Started</div>
+            </div>
+            <div class="content">
+                Change generic logo to owl
+            </div>
+        </div>
     </div>
 </div>
 

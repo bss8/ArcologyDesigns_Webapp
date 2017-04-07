@@ -392,10 +392,8 @@
     <script>
         if( window.adblockInterference === undefined ){
             // adblocker detected, show fallback
-            alert("There are NO ADS on this site (I hate ads)\n" +
-                    "But AdBlock disables JavaScript files. \n" +
-                    "For site functionality to work, please WHITELIST this domain or DISABLE AdBlock on this site. \n" +
-                    "Again...NOOO ADS HERE, EVER!");
+            alert("For all site functionality to work, please consider " +
+                "WHITELISTING this domain or DISABLING AdBlock. \n");
         }
     </script>
 

@@ -5,8 +5,6 @@ var adblockInterference = true;
 (function($){
    $(document).ready(function () {
 
-
-
       // TODO: 1. enable cookies or local storage to preserve theme selection and
       // TODO:    only query user for info on first load. Do not show modal if selection has been made previously.
       // TODO: 2. create menu item that allows resetting of visitedBefore variable
@@ -168,6 +166,14 @@ var adblockInterference = true;
       };  // end onkeypress
 
 
+      $("#hide").click(function(){
+        alert("can you see 1");
+        $(".onlyme").hide();
+      });
+      $("#show").click(function(){
+        alert("can you see 2");
+        $(".onlyme").show();
+      });
 
 
    });  // end document.ready
@@ -181,13 +187,10 @@ function toggleSidebar() {
    })(jQuery);
 }
 
+
 function dec2bin(dec){
    return (dec >>> 0).toString(2);
 }
-
-
-
-
 
 
 
