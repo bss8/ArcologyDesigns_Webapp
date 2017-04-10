@@ -42,11 +42,11 @@
                 <jsp:include page="pages/release_notes.jsp" flush="true" />
             </div>
 
-            <div class="ui tab segment" data-tab="planned_features">
-                <h1 class="siteHeaderColor">Features Planned for Future Releases</h1>
+            <div class="ui tab segment" data-tab="site_features">
+                <h1 class="siteHeaderColor">Site Features Overview</h1>
                 <hr class="custom_hr_style" />
                 
-                <jsp:include page="pages/planned_features.jsp" flush="true" />
+                <jsp:include page="pages/site_features.jsp" flush="true" />
             </div>
 
             <div class="ui tab segment" data-tab="request_features">

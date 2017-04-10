@@ -10,8 +10,9 @@
 <div id="adsMainSidebar" class="ui sidebar vertical inverted demo menu left overlay visible">
 
     <div class="item">
-        <a class="ui logo icon image" style="background:  #f0f0f0; border-radius: 30%; ">
-            <img src="${pageContext.request.contextPath}/resources/images/red_ads_logo.gif">
+        <a class="ui logo icon image" >
+            <img style="border-radius: 20%; "
+                    src="${pageContext.request.contextPath}/resources/images/arco_logo_s.jpg">
         </a>
     </div>
 
@@ -20,11 +21,11 @@
     </a>
 
     <div class="item">
-        <div class="header">New in 0.1</div>
+        <div class="header">New in 1.0</div>
 
         <div class="menu">
             <a class="active inverted  item" data-tab="release_notes">Release Notes</a>
-            <a class="blue item" data-tab="planned_features">Planned Features</a>
+            <a class="blue item" data-tab="site_features">Site Features</a>
             <a class="green item" data-tab="request_features">Request Feature</a>
         </div>
     </div>

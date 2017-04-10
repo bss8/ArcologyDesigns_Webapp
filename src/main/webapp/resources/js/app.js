@@ -166,14 +166,15 @@ var adblockInterference = true;
       };  // end onkeypress
 
 
-      $("#hide").click(function(){
-        alert("can you see 1");
-        $(".onlyme").hide();
-      });
-      $("#show").click(function(){
-        alert("can you see 2");
-        $(".onlyme").show();
-      });
+       $("#inprogress").click(function(){
+           $(".inprogress").toggle();
+       });
+       $("#notstarted").click(function(){
+           $(".notstarted").toggle();
+       });
+       $("#complete").click(function(){
+           $(".complete").toggle();
+       });
 
 
    });  // end document.ready
