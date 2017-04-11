@@ -188,6 +188,31 @@ function toggleSidebar() {
    })(jQuery);
 }
 
+function sendEmail() {
+    // $.get('/sendEmail?toField=' + $("#toField").val() + "&ccField="
+    //     + $("#ccField").val() + "&subjectField=" + $("#subjectField").val()
+    //     + "&messageField=" + $("#messageField").val(),
+    $.ajax({
+        type: "Post",
+        url: "/sendEmail",
+        data: {
+           toField: $("#toField").val(),
+           ccField: $("#ccField").val(),
+           subjectField: $("#subjectField").val(),
+           messageField: $("#messageField").val()
+        },
+        async: true,
+        cache: false,
+        success: function(data) {
+           console.log(data);
+        }
+    });
+        // function(returnedData){
+        //     console.log(returnedData);
+        // }).fail(function(){
+        //     console.log("error");
+    // });
+}
 
 function dec2bin(dec){
    return (dec >>> 0).toString(2);
