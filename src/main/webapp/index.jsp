@@ -36,7 +36,7 @@
         <div class="main ui container" style="margin-left: 280px !important; width: auto; padding-right: 40px;">
 
             <div class="ui tab segment active" data-tab="release_notes" style="margin-top: 14px;">
-                <h1 class="siteHeaderColor">Release Notes for Current Version 0.1</h1>
+                <h1 class="siteHeaderColor">Release Notes for Current Version 1.0</h1>
                 <hr class="custom_hr_style" />
                
                 <jsp:include page="pages/release_notes.jsp" flush="true" />
@@ -71,7 +71,7 @@
             </div>
 
             <div class="ui tab segment" data-tab="contact_us">
-                <h1 class="siteHeaderColor">Contact Us (By 'Us' I mean me)</h1>
+                <h1 class="siteHeaderColor">Submit a message/request </h1>
                 <hr class="custom_hr_style" />
                
                 <jsp:include page="pages/contact_us.jsp" flush="true" />

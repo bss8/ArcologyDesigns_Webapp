@@ -14,16 +14,16 @@ import javax.mail.MessagingException;
 public class MailController {
 
   @RequestMapping("/sendEmail")
-  public int sendEmail(@RequestParam("toField") String toField ,
-      @RequestParam("ccField") String ccField,
-      @RequestParam("subjectField") String subjectField,
-      @RequestParam("messageField") String messageField)
+  public String sendEmail(@RequestParam(value="toField", defaultValue="arcologydesigns@gmail.com") String toField ,
+      @RequestParam(value="ccField", defaultValue="-") String ccField,
+      @RequestParam(value="subjectField", defaultValue="Test") String subjectField,
+      @RequestParam(value="messageField", defaultValue="Test") String messageField)
       throws MessagingException {
 
-    MailService.generateAndSendEmail(toField, ccField,
-        subjectField, messageField);
+      Boolean b1 = MailService.generateAndSendEmail(toField, ccField,
+         subjectField, messageField);
 
-    return 1;
+    return b1.toString();
   }
 
 }

@@ -21,7 +21,7 @@
     <context:annotation-config/>
 
     <!-- -->
-    <context:component-scan base-package="com.arcologydesigns.rest" />
+    <context:component-scan base-package="com.arcologydesigns.rest, com.arcologydesigns.javamail.controller" />
 
     <!-- Handles GET requests for /resources/** by efficiently serving static content in the ${webappRoot}/resources dir -->
     <mvc:resources mapping="/resources/**" location="/resources/js"/>

@@ -44,7 +44,10 @@ a                 { cursor: pointer; }
    overflow: hidden;
 }
 
-
+.prominentText {
+   font-weight: 700;
+   font-size: large;
+}
 /* CUSTOM ALERT STYLES */
 
 /*#modalContainer {*/

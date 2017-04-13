@@ -5,25 +5,31 @@
 <div id="initial_settings_config" class="ui basic modal">
     <i class="close icon"></i>
     <div class="header">
-        Archive Old Messages
+        Welcome to the ArcologyDesigns Site
     </div>
     <div class="image content">
         <div class="image">
-            <i class="archive icon"></i>
+            <i class="book icon"></i>
         </div>
         <div class="description">
-            <p>Your inbox is getting full, would you like us to enable automatic archiving of old messages?</p>
+            <p>You can set some custom options. They will reset each time you clear your browser history.
+            You can also reset them manually via the settings menu at any time. </p>
         </div>
     </div>
+
+    <div class="ui input">
+        <input id="userName" type="text" placeholder="Your name..." maxlength="12">
+    </div>
+
     <div class="actions">
         <div class="two fluid ui inverted buttons">
             <div class="ui red basic inverted button">
-                <i class="remove icon"></i>
-                No
+                <i class="stop circle outline icon"></i>
+                Proceed with defaults
             </div>
-            <div class="ui green basic inverted button">
+            <div class="ui green basic inverted button" id="setUserOptions" >
                 <i class="checkmark icon"></i>
-                Yes
+                Set custom options
             </div>
         </div>
     </div>

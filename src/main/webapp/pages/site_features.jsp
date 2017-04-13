@@ -30,10 +30,18 @@
     <div class="ui middle aligned divided list" style="overflow-y: auto; height: 600px;">
         <div class="item complete">
             <div class="right floated content">
-                <div class="ui button green">  Complete </div>
+                <div class="ui button green">&nbsp;&nbsp;Complete&nbsp;</div>
             </div>
             <div class="content">
                 Filter features based on status
+            </div>
+        </div>
+        <div class="item complete">
+            <div class="right floated content">
+                <div class="ui button green">&nbsp;&nbsp;Complete&nbsp;</div>
+            </div>
+            <div class="content">
+                Change generic logo to owl
             </div>
         </div>
         <div class="item inprogress">
@@ -44,12 +52,28 @@
                 Base converter calculator
             </div>
         </div>
-        <div class="item notstarted">
+        <div class="item inprogress">
             <div class="right floated content">
-                <div class="ui button black">In Progress</div>
+                <div class="ui button orange">In Progress</div>
             </div>
             <div class="content">
                 About the author: include links to profiles
+            </div>
+        </div>
+        <div class="item inprogress">
+            <div class="right floated content">
+                <div class="ui button orange">In Progress</div>
+            </div>
+            <div class="content">
+                Build out contact us form with features for subscriptions and support requests
+            </div>
+        </div>
+        <div class="item inprogress">
+            <div class="right floated content">
+                <div class="ui button orange">In Progress</div>
+            </div>
+            <div class="content">
+                Make previous downloads and articles available
             </div>
         </div>
         <div class="item notstarted">
@@ -74,22 +98,6 @@
             </div>
             <div class="content">
                 MariaDB connection and example
-            </div>
-        </div>
-        <div class="item notstarted">
-            <div class="right floated content">
-                <div class="ui button black">Not Started</div>
-            </div>
-            <div class="content">
-                Change generic logo to owl
-            </div>
-        </div>
-        <div class="item notstarted">
-            <div class="right floated content">
-                <div class="ui button black">Not Started</div>
-            </div>
-            <div class="content">
-                Make previous downloads and articles available
             </div>
         </div>
         <div class="item notstarted">
@@ -147,14 +155,6 @@
             <div class="content">
                 <i class="lightbulb icon"></i>
                 Test out site breadcrumbs for ease of navigation
-            </div>
-        </div>
-        <div class="item notstarted">
-            <div class="right floated content">
-                <div class="ui button black">Not Started</div>
-            </div>
-            <div class="content">
-                Build out contact us form with features for subscriptions and support requests
             </div>
         </div>
     </div>

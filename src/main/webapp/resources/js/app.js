@@ -15,12 +15,15 @@ var adblockInterference = true;
          // Code for localStorage/sessionStorage.
          var visitedBefore = localStorage.getItem("visitedBefore");
          console.log("var visitedBefore = ", visitedBefore);
+         var userName = localStorage.getItem("userName");
 
          if(visitedBefore == undefined) {
             localStorage.setItem("visitedBefore", true);
             visitedBefore = true;
             //$('.ui.basic.modal').modal('show');   // Alternate selection method with classes
             $('#initial_settings_config').modal('show');
+         } else {
+             $("#welcomeUser").text("Welcome, " + userName + "!");
          }
       } else {
          // Sorry! No Web Storage support..
@@ -177,6 +180,18 @@ var adblockInterference = true;
        });
 
 
+       var guid = generateUID();
+       $("#ticketNumber").text(guid);
+       $("#messageField").val("Describe your request here...");
+
+       $("#setUserOptions").click(function() {
+           var userName = $("#userName").val();
+           console.log("Name entered: " + userName);
+           localStorage.setItem("userName", userName);
+           $("#welcomeUser").text("Welcome, " + userName + "!");
+           $('#initial_settings_config').modal('hide');
+       });
+
    });  // end document.ready
 })(jQuery);  // end function($)
 
@@ -189,87 +204,31 @@ function toggleSidebar() {
 }
 
 function sendEmail() {
-    // $.get('/sendEmail?toField=' + $("#toField").val() + "&ccField="
-    //     + $("#ccField").val() + "&subjectField=" + $("#subjectField").val()
-    //     + "&messageField=" + $("#messageField").val(),
-    $.ajax({
-        type: "Post",
-        url: "/sendEmail",
-        data: {
-           toField: $("#toField").val(),
-           ccField: $("#ccField").val(),
-           subjectField: $("#subjectField").val(),
-           messageField: $("#messageField").val()
-        },
-        async: true,
-        cache: false,
-        success: function(data) {
-           console.log(data);
-        }
+    var toEmail = "arcologydesigns@gmail.com";
+    var skipChar = encodeURIComponent("-");
+    var dateStamp = encodeURIComponent(new Date($.now()).toDateString() + ": ");
+    var emailSubmission = "/welcome/sendEmail?toField=" + toEmail
+        + "&ccField=" + skipChar
+        + "&subjectField=" + encodeURIComponent($("#ticketNumber").val()) + encodeURIComponent($("#subjectField").val()) + "\""
+        + "&messageField=" + dateStamp + "%3Cbr%3E" + encodeURIComponent($("#messageField").val());
+    console.log("sendEmail string: " + emailSubmission);
+    $.get(emailSubmission,
+        function(returnedData){
+            console.log(returnedData);
+        }).fail(function(){
+            console.log("error");
     });
-        // function(returnedData){
-        //     console.log(returnedData);
-        // }).fail(function(){
-        //     console.log("error");
-    // });
 }
 
 function dec2bin(dec){
    return (dec >>> 0).toString(2);
 }
 
-
-
-
-
-// CUSTOM ALERT CODE
-/*
-var ALERT_TITLE = "Oops!";
-var ALERT_BUTTON_TEXT = "Ok";
-
-if(document.getElementById) {
-   window.alert = function(txt) {
-      createCustomAlert(txt);
-   }
+function generateUID() {
+    // I generate the UID from two parts here
+    // to ensure the random number provide enough bits.
+    var firstPart = (Math.random() * 46656) | 0;
+    var secondPart = (Math.random() * 46656) | 0;
+    return firstPart + secondPart;
 }
 
-function createCustomAlert(txt) {
-   d = document;
-
-   if(d.getElementById("modalContainer")) return;
-
-   mObj = d.getElementsByTagName("body")[0].appendChild(d.createElement("div"));
-   mObj.id = "modalContainer";
-   mObj.style.height = d.documentElement.scrollHeight + "px";
-
-   alertObj = mObj.appendChild(d.createElement("div"));
-   alertObj.id = "alertBox";
-   if(d.all && !window.opera) alertObj.style.top = document.documentElement.scrollTop + "px";
-   alertObj.style.left = (d.documentElement.scrollWidth - alertObj.offsetWidth)/2 + "px";
-   alertObj.style.visiblity="visible";
-
-   h1 = alertObj.appendChild(d.createElement("h1"));
-   h1.appendChild(d.createTextNode(ALERT_TITLE));
-
-   msg = alertObj.appendChild(d.createElement("p"));
-   //msg.appendChild(d.createTextNode(txt));
-   msg.innerHTML = txt;
-
-   btn = alertObj.appendChild(d.createElement("a"));
-   btn.id = "closeBtn";
-   btn.appendChild(d.createTextNode(ALERT_BUTTON_TEXT));
-   btn.href = "#";
-   btn.focus();
-   btn.onclick = function() { removeCustomAlert();return false; }
-
-   alertObj.style.display = "block";
-
-}
-
-function removeCustomAlert() {
-   document.getElementsByTagName("body")[0].removeChild(document.getElementById("modalContainer"));
-}
-function ful(){
-   alert('Alert this pages');
-}
-    */

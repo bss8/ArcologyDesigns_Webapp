@@ -84,6 +84,12 @@ public class MailService {
     }
 
     return isMessageValid;
-
   }  //end generateAndSendEmail
+
+  public static void main(String args[]) throws MessagingException {
+    generateAndSendEmail("borislav.sabotinov@gmail.com", "borislav.sabotinov@gmail.com",
+            "test", "test");
+  }
+
+
 }  //end class com.arcologydesigns.emailServicedesigns.MailService

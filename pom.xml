@@ -13,8 +13,7 @@
         <spring.version>4.0.5.RELEASE</spring.version>
         <jdk.version>1.8</jdk.version>
         <jackson.version>2.2.3</jackson.version>
-        <!--<sqlserver.version>4.2.6420.100</sqlserver.version>-->
-        <sqlserver.version>4</sqlserver.version>
+        <sqlserver.version>4.2_RELEASE</sqlserver.version>
         <build.scm.revision>SCM_IDENTIFIER</build.scm.revision>
         <build.number>BUILD_NUMBER</build.number>
         <build.id>BUILD_ID</build.id>
@@ -41,21 +40,32 @@
         </dependency>
 
         <dependency>
-            <groupId>com.microsoft.jdbc</groupId>
-            <artifactId>sqljdbc4-4.2</artifactId>
+            <groupId>com.microsoft.sqlserver</groupId>
+            <artifactId>sqljdbc42</artifactId>
             <version>4.2</version>
         </dependency>
 
         <dependency>
             <groupId>org.json</groupId>
             <artifactId>json</artifactId>
-            <version>20120521</version>
+            <version>20160810</version>
         </dependency>
 
         <dependency>
             <groupId>javax.mail</groupId>
             <artifactId>mail</artifactId>
             <version>1.4</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-core</artifactId>
+            <version>2.4.1</version>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>2.4.1.1</version>
         </dependency>
 
     </dependencies>

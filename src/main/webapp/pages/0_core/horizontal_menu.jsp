@@ -47,7 +47,12 @@
             <i class="favorite icon"></i>&nbsp; Favorites
         </a>
         <div class="right menu">
-            <div class="item">
+            <div class="item" style="display: block; min-width: 50px;">
+            <div id="welcomeUser" style=" text-overflow: ellipsis;  overflow: hidden; white-space: nowrap;"></div>
+            </div>
+        </div>
+        <div class="right menu" >
+            <div class="item" >
                 <div class="ui transparent icon input">
                     <input type="text" placeholder="Search...">
                     <i class="search link icon"></i>
