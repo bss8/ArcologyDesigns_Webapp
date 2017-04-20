@@ -8,13 +8,38 @@
         <a class="item active" data-tab="first">Brief Site Overview</a>
         <a class="item" data-tab="second">Privacy Notice</a>
     </div>
-    <div class="ui tab segment active" data-tab="first">
+    <div class="ui tab segment active" data-tab="first" style="font-size: 18px;">
+        <div class="ui info message">
+            <i class="close icon"></i>
+            <div class="header">
+                <a href="https://arcologydesigns.blogspot.com">
+                    <h2>New - The ArcologyDesigns Blog: <span style="color: #0f0f10;">Complexity Made Confusing...</span></h2>
+                </a>
+            </div>
+            <ul class="list">
+                <li>Tutorials and Guides</li>
+                <li>Policy Analysis</li>
+            </ul>
+        </div>
         <ul>
             <li>
-                Check out "Site Features" tab on the sidebar for a list of features and their status.
+                Check out the "Site Features" tab on the sidebar under "New in 1.0" for a list of features and their status.
             </li>
             <li>
-                Report bugs and submit requests via the "Contact Us" form.
+                Download articles and sample tutorial files!
+            </li>
+            <li>
+                <span style="color: #b70611;">Report bugs</span> and submit requests via the "Contact Us" under "About ADS."
+            </li>
+            <li>
+                If you see a port number (e.g., https://arcologydesigns.com:8443), just
+                <span style="color: #b70611;" >delete it and press enter in the address bar.</span>
+                <br/>
+                Alternatively,
+                <a href="https://arcologydesigns.com" style="text-decoration: underline;">
+                    access the website via https directly
+                </a>
+                as http may redirect to this port.
             </li>
         </ul>
 
@@ -24,5 +49,10 @@
             style="font-size:18px;">
             View/Download Privacy Policy
         </a>
+        <ul>
+            <li>
+                https://tools.google.com/dlpage/gaoptout/
+            </li>
+        </ul>
     </div>
 </div>

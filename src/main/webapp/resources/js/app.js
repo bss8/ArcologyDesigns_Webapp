@@ -192,6 +192,16 @@ var adblockInterference = true;
            $('#initial_settings_config').modal('hide');
        });
 
+
+       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+               (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+           m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+       })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+       ga('create', 'UA-97417760-1', 'auto');
+       ga('send', 'pageview');
+
+
    });  // end document.ready
 })(jQuery);  // end function($)
 
@@ -203,15 +213,45 @@ function toggleSidebar() {
    })(jQuery);
 }
 
+function correctCaptcha (response) {
+    alert(response);
+}
+
+function recaptchaCallback(userResponse) {
+    //alert(userResponse);
+
+    $.ajax({
+        url: '/welcome/validateCaptcha?userResponse=' + userResponse,
+        type: 'post',
+        success: function (data) {
+            console.log( "reCAPTCHA server side response: " + data );
+
+            var isUserValid = data;
+            console.log("isUserValid reCaptcha response from server: " + data);
+            if(data === true) {
+                $('#submitContactBtn').removeAttr('disabled');
+                //$('#submitContactBtn').attr('.notAllowedCursor', '');
+            }
+
+        },
+        fail: function() {
+            alert( "error" );
+        }
+    });
+
+}
+
 function sendEmail() {
     var toEmail = "arcologydesigns@gmail.com";
     var skipChar = encodeURIComponent("-");
     var dateStamp = encodeURIComponent(new Date($.now()).toDateString() + ": ");
+
     var emailSubmission = "/welcome/sendEmail?toField=" + toEmail
         + "&ccField=" + skipChar
         + "&subjectField=" + encodeURIComponent($("#ticketNumber").val()) + encodeURIComponent($("#subjectField").val()) + "\""
         + "&messageField=" + dateStamp + "%3Cbr%3E" + encodeURIComponent($("#messageField").val());
     console.log("sendEmail string: " + emailSubmission);
+
     $.get(emailSubmission,
         function(returnedData){
             console.log(returnedData);
@@ -229,6 +269,11 @@ function generateUID() {
     // to ensure the random number provide enough bits.
     var firstPart = (Math.random() * 46656) | 0;
     var secondPart = (Math.random() * 46656) | 0;
+    firstPart = ("000" + firstPart.toString(36)).slice(-3);
+    secondPart = ("000" + secondPart.toString(36)).slice(-3);
     return firstPart + secondPart;
 }
+
+
+
 

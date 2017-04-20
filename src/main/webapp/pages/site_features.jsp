@@ -27,7 +27,7 @@
     </h4>
 
 
-    <div class="ui middle aligned divided list" style="overflow-y: auto; height: 600px;">
+    <div class="ui middle aligned divided list" style="overflow-y: auto; height: 500px;">
         <div class="item complete">
             <div class="right floated content">
                 <div class="ui button green">&nbsp;&nbsp;Complete&nbsp;</div>

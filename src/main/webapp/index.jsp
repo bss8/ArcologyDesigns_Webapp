@@ -2,8 +2,15 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
     <head>
+        <meta charset=”utf-8″>
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+        <meta name="description" content="Free tutorials and tools on the ArcologyDesigns site! Convert from any
+            to any base, work with databases, UI design, Java, assembly and more. Visit today!">
+
         <title>Arco ¯\_(ツ)_/¯ Land</title>
 
+        <link rel="author" href="https://plus.google.com/+ArcologydesignsStudio"/>
+        <link rel="shortcut icon" type="image/png" href="${pageContext.request.contextPath}/resources/images/favicon.ico"/>
         <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/semantic-ui/dist/semantic.min.css">
         <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/jquery.dataTables.min.css">
         <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/style.css">
@@ -11,6 +18,7 @@
         <script type="text/javascript" src="${pageContext.request.contextPath}/resources/semantic-ui/dist/semantic.min.js"></script>
         <script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/jquery.dataTables.min.js"></script>
         <script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/app.js"></script>
+        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
 
         <style id="antiClickjack">body{display:none !important;}</style>
@@ -32,6 +40,19 @@
 
         <jsp:include page="pages/0_core/sidebar_menu.jsp" flush="true" />
         <jsp:include page="pages/0_core/horizontal_menu.jsp" flush="true" />
+
+        <div style="max-height: 100px; margin-left: 290px;">
+            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+            <!-- Responsive_Site_Ad -->
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-9727832599529239"
+                 data-ad-slot="7526889283"
+                 data-ad-format="auto"></ins>
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
 
         <div class="main ui container" style="margin-left: 280px !important; width: auto; padding-right: 40px;">
 
@@ -71,7 +92,7 @@
             </div>
 
             <div class="ui tab segment" data-tab="contact_us">
-                <h1 class="siteHeaderColor">Submit a message/request </h1>
+                <h1 class="siteHeaderColor">Get in touch and learn how to build the contact form: </h1>
                 <hr class="custom_hr_style" />
                
                 <jsp:include page="pages/contact_us.jsp" flush="true" />

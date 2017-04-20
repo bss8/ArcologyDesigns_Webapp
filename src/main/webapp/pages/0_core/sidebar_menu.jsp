@@ -36,7 +36,7 @@
         <div class="menu">
             <a class="red item" data-tab="collective_resources">Collective Resources</a>
             <a class="blue item" data-tab="our_products">Our Products</a>
-            <a class="green item" data-tab="contact_us">Contact Us</a>
+            <a class="green item" data-tab="contact_us">Contact Us (+ tutorial)</a>
             <a class="violet item" data-tab="about_the_author">About the Author</a>
         </div>
 

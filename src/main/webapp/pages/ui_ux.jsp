@@ -37,7 +37,14 @@
         </div>
         <div class="ui bottom attached tab segment active" data-tab="third/a">3A</div>
         <div class="ui bottom attached tab segment" data-tab="third/b">3B</div>
-        <div class="ui bottom attached tab segment" data-tab="third/c">3C</div>
+        <div class="ui bottom attached tab segment" data-tab="third/c">
+            <div>This site uses a scrollbar from this tutorial:
+                <a href="https://css-tricks.com/custom-scrollbars-in-webkit/"> Custom Scrollbars in Webkit</a>
+                <br/>
+
+            </div>
+
+        </div>
     </div>
     <div class="ui tab segment " data-tab="fourth">
         <div class="ui top attached tabular menu">
