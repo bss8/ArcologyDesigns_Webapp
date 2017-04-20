@@ -71,10 +71,27 @@ var adblockInterference = true;
       });
 
 
-      $('.conversion_form .dropdown').dropdown('set selected', ['b2', 'b3']);
-
-      $('.conversion_form .button').on('click', function() {
+      $('.select_a_base').dropdown('set selected', ['2', '3']);
+      $('#fromThisBase').dropdown('set selected', 10);
+      $('#clearBaseDropdown').on('click', function() {
          $('.conversion_form .ui.dropdown').dropdown('clear');
+      });
+
+      $('#submitBaseConversion').on('click', function () {
+         //console.log($('.select_a_base').dropdown('get value').toString());
+         $.ajax({
+             type: "POST",
+             dataType: "json",
+             url: "/welcome/convertBases",
+             data: {
+                numToConvert: $('#integer_input').val(),
+                fromThisBase: $('#fromThisBase').dropdown('get value'),
+                toTheseBases: $('.select_a_base').dropdown('get value').toString()
+             },
+             success: function(data){
+
+             }
+         })
       });
 
       // initialize tabs so they swap content
