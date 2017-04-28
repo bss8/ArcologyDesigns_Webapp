@@ -15,7 +15,9 @@ import com.arcologydesigns.dbconn.SQLDatabaseTest;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.ModelAndView;
 
 import javax.mail.MessagingException;
 import javax.net.ssl.HttpsURLConnection;
@@ -35,7 +37,7 @@ public class GreetingController {
 
     //TODO: separate out into it's own class
     @RequestMapping("/validateCaptcha")
-    public Boolean validateCaptcha(@RequestParam(value="userResponse") String userResponse) throws IOException {
+    public String validateCaptcha(@RequestParam(value="userResponse") String userResponse) throws IOException {
         System.out.println("User reCaptcha response: %s" + userResponse);
 
         String url = "https://www.google.com/recaptcha/api/siteverify";
@@ -78,8 +80,10 @@ public class GreetingController {
 
         JSONObject jObject  = new JSONObject(response.toString()); // json
         System.out.print(jObject.toString());
+        Boolean isRecaptchaValidated = jObject.getBoolean("success");
 
-        return jObject.getBoolean("success");
+
+        return isRecaptchaValidated.toString();
     }
 
     //TODO: separate out into it's own class
@@ -97,4 +101,15 @@ public class GreetingController {
 
         return jsonObject.toString();
     } // end azureTest()
+
+
+//    @RequestMapping(value = "/release", method = RequestMethod.GET)
+//    public ModelAndView releaseRedirect() {
+//
+//        return new ModelAndView("release_notes");
+//    }
+
+
+
+
 } // end class

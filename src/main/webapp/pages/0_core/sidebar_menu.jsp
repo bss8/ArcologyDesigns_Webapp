@@ -24,9 +24,12 @@
         <div class="header">New in 1.0</div>
 
         <div class="menu">
-            <a class="active inverted  item" data-tab="release_notes">Release Notes</a>
-            <a class="blue item" data-tab="site_features">Site Features</a>
-            <a class="green item" data-tab="request_features">Request Feature</a>
+            <a class="active inverted  item"
+               href="${pageContext.request.contextPath}/">Release Notes</a>
+            <a class="blue item"
+               href="${pageContext.request.contextPath}/sitefeatures">Site Features</a>
+            <a class="green item"
+               href="${pageContext.request.contextPath}/requestfeatures">Request Feature</a>
         </div>
     </div>
 
@@ -61,7 +64,7 @@
             <a class="green item" data-tab="ui_ux">UX/UI</a>
             <a class="green item" data-tab="build_automation">Build Automation</a>
             <a class="green item" data-tab="algorithms">Algorithms</a>
-            <a class="violet item" data-tab="practical_rest">Practical Ex. - REST</a>
+            <a class="violet item" href="${pageContext.request.contextPath}/restexample">Practical Ex. - REST</a>
             <a class="orange item" data-tab="practical_js">Practical Ex. - JavaScript</a>
             <a class="orange item" data-tab="practical_java">Practical Ex. - Java Client</a>
             <a class="orange item" data-tab="practical_cpp">Practical Ex. - C++ Client</a>

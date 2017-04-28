@@ -21,19 +21,20 @@
     <context:annotation-config/>
 
     <!-- -->
-    <context:component-scan base-package="com.arcologydesigns.rest, com.arcologydesigns.javamail.controller" />
+    <context:component-scan base-package="com.arcologydesigns.rest, com.arcologydesigns.rest.springmvc,
+     com.arcologydesigns.javamail.controller" />
 
-    <!-- Handles GET requests for /resources/** by efficiently serving static content in the ${webappRoot}/resources dir -->
-    <mvc:resources mapping="/resources/**" location="/resources/js"/>
+    <!--&lt;!&ndash; Handles GET requests for /resources/** by efficiently serving static content in the ${webappRoot}/resources dir &ndash;&gt;-->
+    <mvc:resources mapping="/resources/**" location="/resources/"/>
 
-    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-        <property name="prefix">
-            <value>/pages/</value>
-        </property>
-        <property name="suffix">
-            <value>.jsp</value>
-        </property>
-    </bean>
+    <!--<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">-->
+        <!--<property name="prefix">-->
+            <!--<value>/pages/</value>-->
+        <!--</property>-->
+        <!--<property name="suffix">-->
+            <!--<value>.jsp</value>-->
+        <!--</property>-->
+    <!--</bean>-->
 
     <bean id="contentNegotiationManager"
           class="org.springframework.web.accept.ContentNegotiationManagerFactoryBean">
@@ -52,6 +53,27 @@
             </map>
         </property>
     </bean>
+
+
+    <!--<bean id="viewResolver"-->
+          <!--class="org.springframework.web.servlet.view.UrlBasedViewResolver">-->
+        <!--<property name="viewClass">-->
+            <!--<value>-->
+                <!--org.springframework.web.servlet.view.tiles3.TilesView-->
+            <!--</value>-->
+        <!--</property>-->
+    <!--</bean>-->
+
+
+
+    <!--<bean id="tilesConfigurer"-->
+          <!--class="org.springframework.web.servlet.view.tiles3.TilesConfigurer">-->
+        <!--<property name="definitions">-->
+            <!--<list>-->
+                <!--<value>/WEB-INF/tiles.xml</value>-->
+            <!--</list>-->
+        <!--</property>-->
+    <!--</bean>-->
 
     <!-- Make this available across all of Spring MVC -->
     <mvc:annotation-driven content-negotiation-manager="contentNegotiationManager"/>

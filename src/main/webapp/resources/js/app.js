@@ -1,7 +1,7 @@
 /**
  * Created by Boris on 12/19/2015.
  */
-var adblockInterference = true;
+
 (function($){
    $(document).ready(function () {
 
@@ -43,32 +43,32 @@ var adblockInterference = true;
 
 
       // Get data from MS DB via HTTP GET Ajax call
-      var dataSet = [];
-      $.ajax({
-         type: "GET",
-         dataType: "json",
-         url: "/welcome/azureTest",
-         success: function(data){
-            //alert(JSON.stringify(data));
-            dataSet = data.arrayName;
-
-            $('#example').DataTable( {
-               data: dataSet,
-               fixedColumns: true,
-               responsive: true,
-               "columns": [
-                  { "data": "ID" },
-                  { "data": "NAME" },
-                  { "data": "EMAIL" },
-                  { "data": "JOB_POSITION" },
-                  { "data": "SUBJECT_OF_INTEREST" }
-               ]
-            } );
-
-            for(var p = 0; p < 4; p++)
-               $('#adsProgress').progress('increment');
-         }
-      });
+      // var dataSet = [];
+      // $.ajax({
+      //    type: "GET",
+      //    dataType: "json",
+      //    url: "/welcome/azureTest",
+      //    success: function(data){
+      //       //alert(JSON.stringify(data));
+      //       dataSet = data.arrayName;
+      //
+      //       $('#example').DataTable( {
+      //          data: dataSet,
+      //          fixedColumns: true,
+      //          responsive: true,
+      //          "columns": [
+      //             { "data": "ID" },
+      //             { "data": "NAME" },
+      //             { "data": "EMAIL" },
+      //             { "data": "JOB_POSITION" },
+      //             { "data": "SUBJECT_OF_INTEREST" }
+      //          ]
+      //       } );
+      //
+      //       for(var p = 0; p < 4; p++)
+      //          $('#adsProgress').progress('increment');
+      //    }
+      // });
 
 
       $('.select_a_base').dropdown('set selected', ['2', '3']);
@@ -130,7 +130,19 @@ var adblockInterference = true;
       $('#context30 .menu .item').tab({ context: $('#context30') });
       $('#context31 .menu .item').tab({ context: $('#context31') });
       $('#context32 .menu .item').tab({ context: $('#context32') });
-      $('#context33 .menu .item').tab({ context: $('#context33') });
+
+      // $('#context33 .menu .item').tab({
+      //     history : true,
+      //     childrenOnly: true,
+      //     context: $('#context33') });
+
+       $('#request_feature .menu .item').tab({
+           history : true,
+           // auto: true,
+           // path: '/welcome/pages/request_features.jsp',
+           context: $('#request_feature') });
+
+
       $('#context34 .menu .item').tab({ context: $('#context34') });
       $('#context35 .menu .item').tab({ context: $('#context35') });
       $('#context36 .menu .item').tab({ context: $('#context36') });
@@ -159,31 +171,32 @@ var adblockInterference = true;
       $('.ui.dropdown').dropdown();
       $('#adsProgress').progress('increment');
 
-      var input = document.getElementById("integer_input");
-
-      input.onkeypress = function(e) {
-         switch (e.keyCode){
-            case 45:
-               return this.value.length == 0 ? true : false;
-               break;
-            case 48:
-            case 49:
-            case 50:
-            case 51:
-            case 52:
-            case 53:
-            case 54:
-            case 55:
-            case 56:
-            case 57:
-               return true;
-               break;
-            default:
-               $("#integerErrorMsg").html("+/- Integers Only").show().fadeOut(1000);
-               return false;
-               break;
-         }  // end switch
-      };  // end onkeypress
+      <!-- TODO: extract to page specific script -->
+      // var input = document.getElementById("integer_input");
+      //
+      // input.onkeypress = function(e) {
+      //    switch (e.keyCode){
+      //       case 45:
+      //          return this.value.length == 0 ? true : false;
+      //          break;
+      //       case 48:
+      //       case 49:
+      //       case 50:
+      //       case 51:
+      //       case 52:
+      //       case 53:
+      //       case 54:
+      //       case 55:
+      //       case 56:
+      //       case 57:
+      //          return true;
+      //          break;
+      //       default:
+      //          $("#integerErrorMsg").html("+/- Integers Only").show().fadeOut(1000);
+      //          return false;
+      //          break;
+      //    }  // end switch
+      // };  // end onkeypress
 
 
        $("#inprogress").click(function(){
@@ -198,6 +211,7 @@ var adblockInterference = true;
 
 
        var guid = generateUID();
+       alert(guid);
        $("#ticketNumber").text(guid);
        $("#messageField").val("Describe your request here...");
 
@@ -235,7 +249,7 @@ function correctCaptcha (response) {
 }
 
 function recaptchaCallback(userResponse) {
-    //alert(userResponse);
+    alert(userResponse);
 
     $.ajax({
         url: '/welcome/validateCaptcha?userResponse=' + userResponse,
@@ -245,7 +259,8 @@ function recaptchaCallback(userResponse) {
 
             var isUserValid = data;
             console.log("isUserValid reCaptcha response from server: " + data);
-            if(data === true) {
+            if(data === "true") {
+                alert("Cash me outside!");
                 $('#submitContactBtn').removeAttr('disabled');
                 //$('#submitContactBtn').attr('.notAllowedCursor', '');
             }

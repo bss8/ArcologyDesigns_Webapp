@@ -18,9 +18,13 @@
     </servlet-mapping>
 
     <welcome-file-list>
-        <welcome-file>index.jsp</welcome-file>
+        <welcome-file>/index.jsp</welcome-file>
     </welcome-file-list>
 
+    <!-- Load the tiles container by using the appropriate listener: load everything -->
+    <!--<listener>-->
+        <!--<listener-class>org.apache.tiles.extras.complete.CompleteAutoloadTilesListener</listener-class>-->
+    <!--</listener>-->
 
     <!-- Require HTTPS for everything except /img (favicon) and /css. -->
     <!--<security-constraint>-->
