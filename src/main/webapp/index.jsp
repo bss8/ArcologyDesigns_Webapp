@@ -24,12 +24,7 @@
         <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/semantic-ui/dist/semantic.min.css">
         <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/jquery.dataTables.min.css">
         <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/style.css">
-        <script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/jquery-2.1.4.js"></script>
-        <script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/jquery.address.js"></script>
-        <script type="text/javascript" src="${pageContext.request.contextPath}/resources/semantic-ui/dist/semantic.min.js"></script>
-        <script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/jquery.dataTables.min.js"></script>
-        <script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/app.js"></script>
-        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
 
 
         <style id="antiClickjack">body{display:none !important;}</style>
@@ -434,6 +429,8 @@
                 <h1 class="siteHeaderColor">Body of Page - Title </h1>
                 <hr class="custom_hr_style" />
 
+                <div id="results"></div>
+
                 <jsp:include page="pages/release_notes.jsp" flush="true" />
                     <%--<section id="site-content">--%>
                         <%--<tiles:insertAttribute name="body" />--%>
@@ -458,6 +455,15 @@
     </script>
 
     <jsp:include page="pages/modals/initial_settings.jsp" flush="true" />
+
+
+    <script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/jquery-2.1.4.js"></script>
+    <script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/jquery.address.js"></script>
+    <script src="https://apis.google.com/js/api.js"></script>
+    <script type="text/javascript" src="${pageContext.request.contextPath}/resources/semantic-ui/dist/semantic.min.js"></script>
+    <script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/app.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </html>
 
 

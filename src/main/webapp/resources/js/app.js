@@ -233,7 +233,60 @@
        ga('send', 'pageview');
 
 
-   });  // end document.ready
+      //  function start() {
+      //      // Initializes the client with the API key and the Drive API.
+      //      gapi.client.init({
+      //          'apiKey': 'AIzaSyCecGDdAmGexEKXYGYnZqEGSuPZPFOCrEg',
+      //          'discoveryDocs': ['https://www.googleapis.com/discovery/v1/apis/drive/v2/rest']
+      //      }).then(function() {
+      //          // Executes an API request, and returns a Promise.
+      //          // The method name `language.translations.list` comes from the API discovery.
+      //          return gapi.client.drive.files.get({
+      //              fileId: '0B_lD7FHorWGzNDNHXzlaLWNGR2M'
+      //          });
+      //      }).then(function(resp) {
+      //          console.log('Title: ' + resp.title);
+      //          console.log('Description: ' + resp.description);
+      //          console.log('MIME type: ' + resp.mimeType);
+      //      }, function(reason) {
+      //          console.log('Error: ' + reason.result.error.message);
+      //      });
+      // }
+      //
+      //
+      //  // Loads the JavaScript client library and invokes `start` afterwards.
+      //  gapi.load('client', start);
+
+       //$.getScript('//apis.google.com/js/api.js', function() {
+           gapi.load('auth:client', handleClientLoad);
+       //});
+
+
+       function handleClientLoad() {
+           gapi.client.setApiKey('AIzaSyCecGDdAmGexEKXYGYnZqEGSuPZPFOCrEg');
+           makeApiCall();
+       }
+
+       function makeApiCall() {
+           gapi.client.load('drive', 'v2', makeRequest);
+       }
+
+       function makeRequest() {
+           var fileId = '0B_lD7FHorWGzNDNHXzlaLWNGR2M';
+           var request = gapi.client.drive.files.get({'fileId': fileId});
+
+           request.execute(function (resp) {
+               console.log('Title: ' + resp.title);
+                        console.log('Description: ' + resp.description);
+                        console.log('MIME type: ' + resp.mimeType);
+           });
+
+       }
+
+
+
+
+       });  // end document.ready
 })(jQuery);  // end function($)
 
 function toggleSidebar() {
@@ -305,6 +358,10 @@ function generateUID() {
     secondPart = ("000" + secondPart.toString(36)).slice(-3);
     return firstPart + secondPart;
 }
+
+
+
+
 
 
 
