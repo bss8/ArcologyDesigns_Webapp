@@ -24,23 +24,21 @@
         <div class="header">New in 1.0</div>
 
         <div class="menu">
-            <a class="active inverted  item"
+            <a class="active inverted item"
                href="${pageContext.request.contextPath}/">Release Notes</a>
-            <a class="blue item"
+            <a class="item"
                href="${pageContext.request.contextPath}/sitefeatures">Site Features</a>
-            <a class="green item"
-               href="${pageContext.request.contextPath}/requestfeatures">Request Feature</a>
         </div>
     </div>
 
     <div class="item">
-        <div class="header">About ADS &nbsp;&nbsp;&nbsp;&nbsp;<i class="mail outline icon"></i></div>
+        <div class="header">About ADS &nbsp;&nbsp;&nbsp;&nbsp;<i class="info icon"></i></div>
 
         <div class="menu">
-            <a class="red item" data-tab="collective_resources">Collective Resources</a>
-            <a class="blue item" data-tab="our_products">Our Products</a>
-            <a class="green item" data-tab="contact_us">Contact Us (+ tutorial)</a>
-            <a class="violet item" data-tab="about_the_author">About the Author</a>
+            <a class="item" href="${pageContext.request.contextPath}/products">Products and Services</a>
+            <a class="item" href="${pageContext.request.contextPath}/contact">
+                <i class="mail icon red"></i> Contact (+ tutorial)</a>
+            <a class="item" href="${pageContext.request.contextPath}/about">About the Author</a>
         </div>
 
     </div>
@@ -48,9 +46,19 @@
         <div class="header">Downloads &nbsp;&nbsp;&nbsp;&nbsp;<i class="download icon"></i></div>
 
         <div class="menu">
-            <a class="red item" data-tab="articles">Articles</a>
-            <a class="blue item" data-tab="sample_files">Sample IT Files</a>
-            <a class="green item" data-tab="how_to_videos">How-to DL: Audio / Video</a>
+            <a class="item" href="${pageContext.request.contextPath}/downloads">Articles & Files</a>
+            <a class="item" href="${pageContext.request.contextPath}/videoDownload">Video Downloader</a>
+        </div>
+
+    </div>
+
+    <div class="item">
+        <div class=" header">Career Resources &nbsp;&nbsp;&nbsp;&nbsp;<i class="lince chart icon"></i></div>
+
+        <div class="menu">
+            <a class="item" href="${pageContext.request.contextPath}/resumes">Resumes & Portfolios</a>
+            <a class="item" href="${pageContext.request.contextPath}/technicalInterviews">Technical Interviews</a>
+            <a class="item" href="${pageContext.request.contextPath}/hotCareerTips">Hot Tips</a>
         </div>
 
     </div>
@@ -59,15 +67,15 @@
         <div class="header">Tutorials &nbsp;&nbsp;&nbsp;&nbsp;<i class="database icon"></i></div>
 
         <div class="menu">
-            <a class="red item" data-tab="spring_rest">Spring REST</a>
-            <a class="blue item" data-tab="databases">Databases</a>
-            <a class="green item" data-tab="ui_ux">UX/UI</a>
-            <a class="green item" data-tab="build_automation">Build Automation</a>
-            <a class="green item" data-tab="algorithms">Algorithms</a>
-            <a class="violet item" href="${pageContext.request.contextPath}/restexample">Practical Ex. - REST</a>
-            <a class="orange item" data-tab="practical_js">Practical Ex. - JavaScript</a>
-            <a class="orange item" data-tab="practical_java">Practical Ex. - Java Client</a>
-            <a class="orange item" data-tab="practical_cpp">Practical Ex. - C++ Client</a>
+            <a class="item" href="${pageContext.request.contextPath}/springREST">Spring REST</a>
+            <a class="item" href="${pageContext.request.contextPath}/databases">Databases</a>
+            <a class="item" href="${pageContext.request.contextPath}/uiux">UX/UI</a>
+            <a class="item" href="${pageContext.request.contextPath}/buildAutomation">Build Automation</a>
+            <a class="item" href="${pageContext.request.contextPath}/algorithms">Algorithms</a>
+            <a class="item" href="${pageContext.request.contextPath}/restExample">Practical Ex. - REST</a>
+            <a class="item" href="${pageContext.request.contextPath}/javascriptExample">Practical Ex. - JavaScript</a>
+            <a class="item" href="${pageContext.request.contextPath}/javaClientExample">Practical Ex. - Java Client</a>
+            <a class="item" href="${pageContext.request.contextPath}/cppClient">Practical Ex. - C++ Client</a>
         </div>
 
     </div>
@@ -76,11 +84,11 @@
         <div class=" header">Digital Encoding &nbsp;&nbsp;&nbsp;&nbsp;<i class="sort numeric ascending icon"></i></div>
 
         <div class="menu">
-            <a class="red item" data-tab="converting_bases">Converting from/to any base</a>
-            <a class="blue item" data-tab="ieee_754">IEEE 754 SP & DP</a>
-            <a class="green item" data-tab="encoding_resources">Resources</a>
-            <a class="violet item" data-tab="binary">All About Binary</a>
-            <a class="orange item" data-tab="bitwise">Bitwise Operations</a>
+            <a class="item" href="${pageContext.request.contextPath}/convertingBases">Converting from/to any base</a>
+            <a class="item" href="${pageContext.request.contextPath}/ieee754">IEEE 754 SP & DP</a>
+            <a class="item" href="${pageContext.request.contextPath}/encoding">Resources</a>
+            <a class="item" href="${pageContext.request.contextPath}/binary">All About Binary</a>
+            <a class="item" href="${pageContext.request.contextPath}/bitwise">Bitwise Operations</a>
         </div>
 
     </div>
@@ -89,9 +97,8 @@
         <div class=" header">C++ to MIPS32 &nbsp;&nbsp;&nbsp;&nbsp;<i class="columns icon"></i></div>
 
         <div class="menu">
-            <a class="red item" data-tab="basic_converter">Basic Converter</a>
-            <a class="blue item" data-tab="mips_resources">MIPS Resources</a>
-            <a class="green item" data-tab="example_programs">Example Programs</a>
+            <a class="item" href="${pageContext.request.contextPath}/mipsBasicConverter">C++ to MIPS Converter</a>
+            <a class="item" href="${pageContext.request.contextPath}/mipsExamples">MIPS Example Programs</a>
         </div>
 
     </div>
@@ -100,10 +107,10 @@
         <div class=" header">Soft. Architecture &nbsp;&nbsp;&nbsp;&nbsp;<i class="university icon"></i></div>
 
         <div class="menu">
-            <a class="red item" data-tab="web_applications">Web Applications</a>
-            <a class="blue item" data-tab="client_applications">Client Applications</a>
-            <a class="violet item" data-tab="design_philosophy">My Design Philosophy</a>
-            <a class="orange item" data-tab="architecture_resources">Resources</a>
+            <a class="item" href="${pageContext.request.contextPath}/webApplications">Web Applications</a>
+            <a class="item" href="${pageContext.request.contextPath}/clientApplications">Client Applications</a>
+            <a class="item" href="${pageContext.request.contextPath}/designPhilosophy">My Design Philosophy</a>
+            <a class="item" href="${pageContext.request.contextPath}/architectureResources">Resources</a>
         </div>
 
     </div>
@@ -112,10 +119,9 @@
         <div class=" header">Web Applications &nbsp;&nbsp;&nbsp;&nbsp;<i class="browser icon"></i></div>
 
         <div class="menu">
-            <a class="red item" data-tab="java_stack">Java Technology Stack</a>
-            <a class="blue item" data-tab="dot_net_stack">.NET Technology Stack</a>
-            <a class="violet item" data-tab="app_vs_site">Web Application vs Site</a>
-            <a class="orange item" data-tab="web_app_resources">Resources</a>
+            <a class="item" href="${pageContext.request.contextPath}/javaStack">Java Technology Stack</a>
+            <a class="item" href="${pageContext.request.contextPath}/dotNetStack">.NET Technology Stack</a>
+            <a class="item" href="${pageContext.request.contextPath}/objectOriented">Object Oriented</a>
         </div>
 
     </div>
@@ -124,10 +130,9 @@
         <div class=" header">Disease Research &nbsp;&nbsp;&nbsp;&nbsp;<i class="doctor icon"></i></div>
 
         <div class="menu">
-            <a class="red item" data-tab="neglected_diseases">Neglected Diseases</a>
-            <a class="blue item" data-tab="senescence">Senescence</a>
-            <a class="green item" data-tab="how_to_contribute">How to Contribute</a>
-            <a class="violet item" data-tab="our_vision">My Vision</a>
+            <a class="item" href="${pageContext.request.contextPath}/neglectedDiseases">Neglected Diseases</a>
+            <a class="item" href="${pageContext.request.contextPath}/senescence">Senescence</a>
+            <a class="item" href="${pageContext.request.contextPath}/myVision">My Vision</a>
         </div>
 
     </div>
@@ -136,9 +141,7 @@
         <div class=" header">Photography &nbsp;&nbsp;&nbsp;&nbsp;<i class="photo icon"></i></div>
 
         <div class="menu">
-            <a class="red item" data-tab="scientific_photos">Scientific</a>
-            <a class="blue item" data-tab="natural_photos">Natural / Artistic</a>
-            <a class="green item" data-tab="about_photos">Equipment & Process</a>
+            <a class="item" href="${pageContext.request.contextPath}/gallery">Gallery</a>
         </div>
 
     </div>
@@ -147,22 +150,19 @@
         <div class=" header">Video Highlights &nbsp;&nbsp;&nbsp;&nbsp;<i class="film icon"></i></div>
 
         <div class="menu">
-            <a class="red item" data-tab="development_tutorials">Development Tutorials</a>
-            <a class="blue item" data-tab="it_tutorials">IT Tutorials</a>
-            <a class="green item" data-tab="music_ambient">Music / Ambient</a>
-            <a class="violet item" data-tab="gaming">Gaming</a>
-            <a class="orange item" data-tab="other_vids">Other</a>
+            <a class="item" href="${pageContext.request.contextPath}/developmentTutorials">Development Tutorials</a>
+            <a class="item" href="${pageContext.request.contextPath}/itTutorials">IT Tutorials</a>
+            <a class="item" href="${pageContext.request.contextPath}/careerSeries">Career Series</a>
+            <a class="item" href="${pageContext.request.contextPath}/music">Music / Ambient</a>
         </div>
 
     </div>
 
     <div class="item">
-        <div class=" header">Writings / Blog &nbsp;&nbsp;&nbsp;&nbsp;<i class="line chart icon"></i></div>
+        <div class=" header">Writings / Blog &nbsp;&nbsp;&nbsp;&nbsp;<i class="newspaper icon"></i></div>
 
         <div class="menu">
-            <a class="red item" data-tab="policy_analysis">Policy Analysis</a>
-            <a class="blue item" data-tab="short_stories">Short Stories</a>
-            <a class="green item" data-tab="it_development">IT / Development</a>
+            <a class="item" href="https://arcologydesigns.blogspot.com">Career / Software Blog</a>
         </div>
 
     </div>

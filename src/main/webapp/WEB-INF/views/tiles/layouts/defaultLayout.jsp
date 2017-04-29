@@ -16,14 +16,11 @@
 
         <title><tiles:getAsString name="title" /></title>
 
-        <link rel="author" href="https://plus.google.com/+ArcologydesignsStudio"/>
+        <link rel="author" href="https://plus.google.com/+GrowYourCareer"/>
         <link rel="shortcut icon" type="image/png" href="${pageContext.request.contextPath}/resources/images/favicon.ico"/>
         <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/semantic-ui/dist/semantic.min.css">
         <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/jquery.dataTables.min.css">
         <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/style.css">
-
-
-
 
         <style id="antiClickjack">body{display:none !important;}</style>
         <script type="text/javascript">
@@ -39,15 +36,23 @@
     </head>
 
     <body>
-        <%--<header id="header">--%>
-            <%--<tiles:insertAttribute name="header" />--%>
-        <%--</header>--%>
 
-        <%--<section id="sidemenu">--%>
-            <%--<tiles:insertAttribute name="menu" />--%>
-        <%--</section>--%>
         <jsp:include page="/pages/0_core/sidebar_menu.jsp" flush="true" />
         <jsp:include page="/pages/0_core/horizontal_menu.jsp" flush="true" />
+
+        <!-- GOOGLE AD -->
+        <%--<div style="max-height: 100px; margin-left: 290px;">--%>
+            <%--<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>--%>
+            <%--<!-- Responsive_Site_Ad -->--%>
+            <%--<ins class="adsbygoogle"--%>
+                <%--style="display:block"--%>
+                <%--data-ad-client="ca-pub-9727832599529239"--%>
+                <%--data-ad-slot="7526889283"--%>
+                <%--data-ad-format="auto"></ins>--%>
+            <%--<script>--%>
+                <%--(adsbygoogle = window.adsbygoogle || []).push({});--%>
+            <%--</script>--%>
+        <%--</div>--%>
 
         <div class="main ui container" style="margin-left: 280px !important; width: auto; padding-right: 40px;">
             <div class="ui tab segment active" data-tab="release_notes" style="margin-top: 14px;">
@@ -58,9 +63,8 @@
             </div>
         </div>
 
-        <footer id="footer">
-            <tiles:insertAttribute name="footer" />
-        </footer>
+        <jsp:include page="/pages/0_core/footer.jsp" flush="true" />
+
     </body>
 
     <script>
@@ -75,9 +79,12 @@
 
     <script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/jquery-2.1.4.js"></script>
     <script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/jquery.address.js"></script>
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
     <script src="https://apis.google.com/js/api.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
     <script type="text/javascript" src="${pageContext.request.contextPath}/resources/semantic-ui/dist/semantic.min.js"></script>
     <script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/jquery.dataTables.min.js"></script>
     <script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/app.js"></script>
+
 </html>

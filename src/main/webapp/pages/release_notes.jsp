@@ -2,25 +2,28 @@
   User: Boris
   Date: 12/21/2015  @ 8:15 PM
 --%>
-
+<h1 class="siteHeaderColor">Application Release Notes</h1>
+<hr class="custom_hr_style" />
 <div id="context32">
     <div class="ui secondary two item stackable menu">
         <a class="item active" data-tab="first">Brief Site Overview</a>
         <a class="item" data-tab="second">Privacy Notice</a>
     </div>
     <div class="ui tab segment active" data-tab="first" style="font-size: 18px;">
+
         <div class="ui info message">
             <i class="close icon"></i>
             <div class="header">
                 <a href="https://arcologydesigns.blogspot.com">
-                    <h2>New - The ArcologyDesigns Blog: <span style="color: #0f0f10;">Complexity Made Confusing...</span></h2>
+                    <h2>New - GrowYourCareer Blog: <span style="color: #0f0f10;">Complexity Made Confusing...</span></h2>
                 </a>
             </div>
-            <ul class="list">
+            <ul>
                 <li>Tutorials and Guides</li>
                 <li>Policy Analysis</li>
             </ul>
         </div>
+
         <ul>
             <li>
                 Check out the "Site Features" tab on the sidebar under "New in 1.0" for a list of features and their status.

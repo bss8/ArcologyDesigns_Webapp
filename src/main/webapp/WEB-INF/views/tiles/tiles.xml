@@ -19,34 +19,244 @@
         <put-attribute name="body" value="/index.jsp" />
     </definition>
 
-    <!-- Product Page -->
-    <definition name="products" extends="base-definition">
-        <put-attribute name="title" value="Products" />
-        <put-attribute name="body" value="/WEB-INF/views/pages/products.jsp" />
-    </definition>
-
-    <!-- Contact-us Page -->
-    <definition name="contactus" extends="base-definition">
-        <put-attribute name="title" value="Contact Us" />
-        <put-attribute name="body" value="/pages/contact_us.jsp" />
-    </definition>
-
     <!-- Site Features Page -->
     <definition name="sitefeatures" extends="base-definition">
         <put-attribute name="title" value="Site Features" />
         <put-attribute name="body" value="/pages/site_features.jsp" />
     </definition>
 
-    <!-- Request Features Page -->
-    <definition name="requestfeatures" extends="base-definition">
-        <put-attribute name="title" value="Request Features" />
-        <put-attribute name="body" value="/pages/request_features.jsp" />
+    <!-- Product Page -->
+    <definition name="products" extends="base-definition">
+        <put-attribute name="title" value="Products" />
+        <put-attribute name="body" value="/pages/our_products.jsp" />
+    </definition>
+
+    <!-- Contact-us Page -->
+    <definition name="contact" extends="base-definition">
+        <put-attribute name="title" value="Contact" />
+        <put-attribute name="body" value="/pages/contact.jsp" />
+    </definition>
+
+    <!-- About Page -->
+    <definition name="about" extends="base-definition">
+        <put-attribute name="title" value="About" />
+        <put-attribute name="body" value="/pages/about_the_author.jsp" />
+    </definition>
+
+    <!-- Downloads Page -->
+    <definition name="downloads" extends="base-definition">
+        <put-attribute name="title" value="Downloads" />
+        <put-attribute name="body" value="/pages/articles_and_files.jsp" />
+    </definition>
+
+    <!-- Video Download Page -->
+    <definition name="videoDownload" extends="base-definition">
+        <put-attribute name="title" value="Download Videos" />
+        <put-attribute name="body" value="/pages/video_download.jsp" />
+    </definition>
+
+    <!-- Resume and Portfolio Page -->
+    <definition name="resumes" extends="base-definition">
+        <put-attribute name="title" value="Resumes and Portfolios" />
+        <put-attribute name="body" value="/pages/resumes.jsp" />
+    </definition>
+
+    <!-- Technical Interviews Page -->
+    <definition name="technicalInterviews" extends="base-definition">
+        <put-attribute name="title" value="Tech Interviews" />
+        <put-attribute name="body" value="/pages/technical_interviews.jsp" />
+    </definition>
+
+    <!-- Hot Career Tips Page -->
+    <definition name="hotCareerTips" extends="base-definition">
+        <put-attribute name="title" value="Hot Tips" />
+        <put-attribute name="body" value="/pages/hot_tips.jsp" />
+    </definition>
+
+    <!-- Spring REST Page -->
+    <definition name="springREST" extends="base-definition">
+        <put-attribute name="title" value="Spring REST" />
+        <put-attribute name="body" value="/pages/spring_rest.jsp" />
+    </definition>
+
+    <!-- Databases Page -->
+    <definition name="databases" extends="base-definition">
+        <put-attribute name="title" value="Databases" />
+        <put-attribute name="body" value="/pages/databases.jsp" />
+    </definition>
+
+    <!-- UI UX Page -->
+    <definition name="uiux" extends="base-definition">
+        <put-attribute name="title" value="UI / UX" />
+        <put-attribute name="body" value="/pages/ui_ux.jsp" />
+    </definition>
+
+    <!-- Build Automation Page -->
+    <definition name="buildAutomation" extends="base-definition">
+        <put-attribute name="title" value="Build Automation" />
+        <put-attribute name="body" value="/pages/build_automation.jsp" />
+    </definition>
+
+    <!-- Algorithms Page -->
+    <definition name="algorithms" extends="base-definition">
+        <put-attribute name="title" value="Algorithms" />
+        <put-attribute name="body" value="/pages/algorithms.jsp" />
     </definition>
 
     <!-- REST Example Page -->
-    <definition name="restexample" extends="base-definition">
+    <definition name="restExample" extends="base-definition">
         <put-attribute name="title" value="REST Example" />
         <put-attribute name="body" value="/pages/rest_table_example.jsp" />
+    </definition>
+
+    <!-- JavaScript Example Page -->
+    <definition name="javascriptExample" extends="base-definition">
+        <put-attribute name="title" value="JavaScript Ex." />
+        <put-attribute name="body" value="/pages/practical_js.jsp" />
+    </definition>
+
+    <!-- Java Client Page -->
+    <definition name="javaClientExample" extends="base-definition">
+        <put-attribute name="title" value="Java Client" />
+        <put-attribute name="body" value="/pages/practical_java.jsp" />
+    </definition>
+
+    <!-- CPP Client Page -->
+    <definition name="cppClient" extends="base-definition">
+        <put-attribute name="title" value="C++ Client" />
+        <put-attribute name="body" value="/pages/practical_cpp.jsp" />
+    </definition>
+
+    <!-- Base Conversion Page -->
+    <definition name="convertingBases" extends="base-definition">
+        <put-attribute name="title" value="Converting Bases" />
+        <put-attribute name="body" value="/pages/converting_bases.jsp" />
+    </definition>
+
+    <!-- IEEE 754 Page -->
+    <definition name="ieee754" extends="base-definition">
+        <put-attribute name="title" value="IEEE 754" />
+        <put-attribute name="body" value="/pages/ieee_754.jsp" />
+    </definition>
+
+    <!-- Encoding Page -->
+    <definition name="encoding" extends="base-definition">
+        <put-attribute name="title" value="Data Encoding" />
+        <put-attribute name="body" value="/pages/encoding.jsp" />
+    </definition>
+
+    <!-- Binary Page -->
+    <definition name="binary" extends="base-definition">
+        <put-attribute name="title" value="About Binary" />
+        <put-attribute name="body" value="/pages/binary.jsp" />
+    </definition>
+
+    <!-- Bitwise Page -->
+    <definition name="bitwise" extends="base-definition">
+        <put-attribute name="title" value="Bitwise Operations" />
+        <put-attribute name="body" value="/pages/bitwise.jsp" />
+    </definition>
+
+    <!-- MIPS Converter Page -->
+    <definition name="mipsBasicConverter" extends="base-definition">
+        <put-attribute name="title" value="C++ to MIPS32" />
+        <put-attribute name="body" value="/pages/cpp_mips_converter.jsp" />
+    </definition>
+
+    <!-- MIPS Examples Page -->
+    <definition name="mipsExamples" extends="base-definition">
+        <put-attribute name="title" value="MIPS32 Examples" />
+        <put-attribute name="body" value="/pages/mips_example_programs.jsp" />
+    </definition>
+
+    <!-- Web Applications Page -->
+    <definition name="webApplications" extends="base-definition">
+        <put-attribute name="title" value="Web Apps" />
+        <put-attribute name="body" value="/pages/web_applications.jsp" />
+    </definition>
+
+    <!-- Client Applications Page -->
+    <definition name="clientApplications" extends="base-definition">
+        <put-attribute name="title" value="Client Apps" />
+        <put-attribute name="body" value="/pages/client_applications.jsp" />
+    </definition>
+
+    <!-- Design Philosophy Page -->
+    <definition name="restExample" extends="base-definition">
+        <put-attribute name="title" value="My Design Philosophy" />
+        <put-attribute name="body" value="/pages/design_philosophy.jsp" />
+    </definition>
+
+    <!-- Architecture Resources Page -->
+    <definition name="restExample" extends="base-definition">
+        <put-attribute name="title" value="REST Example" />
+        <put-attribute name="body" value="/pages/architecture_resources.jsp" />
+    </definition>
+
+    <!-- Java Stack Page -->
+    <definition name="javaStack" extends="base-definition">
+        <put-attribute name="title" value="J2EE Stack" />
+        <put-attribute name="body" value="/pages/java_stack.jsp" />
+    </definition>
+
+    <!-- .NET Stack Page -->
+    <definition name="dotNetStack" extends="base-definition">
+        <put-attribute name="title" value=".NET Stack" />
+        <put-attribute name="body" value="/pages/dot_net_stack.jsp" />
+    </definition>
+
+    <!-- OO Concepts Stack Page -->
+    <definition name="objectOriented" extends="base-definition">
+        <put-attribute name="title" value="Obj. Oriented" />
+        <put-attribute name="body" value="/pages/object_oriented.jsp" />
+    </definition>
+
+    <!-- Neglected Diseases Page -->
+    <definition name="neglectedDiseases" extends="base-definition">
+        <put-attribute name="title" value="Neglected Diseases" />
+        <put-attribute name="body" value="/pages/neglected_diseases.jsp" />
+    </definition>
+
+    <!-- Senescence Page -->
+    <definition name="senescence" extends="base-definition">
+        <put-attribute name="title" value="Senescence" />
+        <put-attribute name="body" value="/pages/senescence.jsp" />
+    </definition>
+
+    <!-- My Vision Page -->
+    <definition name="myVision" extends="base-definition">
+        <put-attribute name="title" value="My Vision" />
+        <put-attribute name="body" value="/pages/my_vision.jsp" />
+    </definition>
+
+    <!-- Gallery Page -->
+    <definition name="gallery" extends="base-definition">
+        <put-attribute name="title" value="Photo Gallery" />
+        <put-attribute name="body" value="/pages/photo_gallery.jsp" />
+    </definition>
+
+    <!-- Development Videos Page -->
+    <definition name="developmentTutorials" extends="base-definition">
+        <put-attribute name="title" value="Development Vids" />
+        <put-attribute name="body" value="/pages/development_tutorials.jsp" />
+    </definition>
+
+    <!-- IT Tutorials Page -->
+    <definition name="itTutorials" extends="base-definition">
+        <put-attribute name="title" value="IT Vids" />
+        <put-attribute name="body" value="/pages/it_tutorials.jsp" />
+    </definition>
+
+    <!-- Career Tutorials Page -->
+    <definition name="careerSeries" extends="base-definition">
+        <put-attribute name="title" value="Career Vids" />
+        <put-attribute name="body" value="/pages/career_vids.jsp" />
+    </definition>
+
+    <!-- Music Page -->
+    <definition name="music" extends="base-definition">
+        <put-attribute name="title" value="Music" />
+        <put-attribute name="body" value="/pages/music_ambient.jsp" />
     </definition>
 
 </tiles-definitions>

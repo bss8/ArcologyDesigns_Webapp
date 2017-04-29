@@ -13,10 +13,10 @@
         <div>
             <h3 class="blue">Find ArcologyDesigns on these platforms:</h3>
             <br/>
-            <a href="https://www.youtube.com/user/ArcologyDesigns">
+            <a href="http://www.youtube.com/c/GrowYourCareer">
                 <i class="youtube icon huge red"></i>
             </a>
-            <a href="https://plus.google.com/+ArcologydesignsStudio">
+            <a href="https://plus.google.com/+GrowYourCareer">
                 <i class="google plus icon big red"></i>
             </a>
             <a href="https://www.facebook.com/arcologydesigns/">

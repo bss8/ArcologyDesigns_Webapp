@@ -5,12 +5,6 @@
 (function($){
    $(document).ready(function () {
 
-      // TODO: 1. enable cookies or local storage to preserve theme selection and
-      // TODO:    only query user for info on first load. Do not show modal if selection has been made previously.
-      // TODO: 2. create menu item that allows resetting of visitedBefore variable
-      // TODO: 3. provide users with option to change site style:
-      // TODO:    remove '.inverted' from sidebar (changes to white and shows colors)
-
       if(typeof(Storage) !== "undefined") {
          // Code for localStorage/sessionStorage.
          var visitedBefore = localStorage.getItem("visitedBefore");
@@ -39,6 +33,11 @@
              show: 200,
              hide: 500
           }
+      });
+
+
+      $(".close.icon").click(function(){
+          $(this).parent().hide();
       });
 
 
@@ -98,67 +97,54 @@
       $('.demo.menu .item').tab({history:false});
       $('.testContent.menu .item').tab({history:false});
 
-      $('#context1 .menu .item').tab({ context: $('#context1') });
-      $('#context2 .menu .item').tab({ context: $('#context2') });
-      $('#context3 .menu .item').tab({ context: $('#context3') });
-      $('#context4 .menu .item').tab({ context: $('#context4') });
-      $('#context5 .menu .item').tab({ context: $('#context5') });
-      $('#context6 .menu .item').tab({ context: $('#context6') });
-      $('#context7 .menu .item').tab({ context: $('#context7') });
-      $('#context8 .menu .item').tab({ context: $('#context8') });
-      $('#context9 .menu .item').tab({ context: $('#context9') });
-      $('#context10 .menu .item').tab({ context: $('#context10') });
-      $('#context11 .menu .item').tab({ context: $('#context11') });
-      $('#context12 .menu .item').tab({ context: $('#context12') });
-      $('#context13 .menu .item').tab({ context: $('#context13') });
-      $('#context14 .menu .item').tab({ context: $('#context14') });
-      $('#context15 .menu .item').tab({ context: $('#context15') });
-      $('#context16 .menu .item').tab({ context: $('#context16') });
-      $('#context17 .menu .item').tab({ context: $('#context17') });
-      $('#context18 .menu .item').tab({ context: $('#context18') });
-      $('#context19 .menu .item').tab({ context: $('#context19') });
-      $('#context20 .menu .item').tab({ context: $('#context20') });
-      $('#context21 .menu .item').tab({ context: $('#context21') });
-      $('#context22 .menu .item').tab({ context: $('#context22') });
-      $('#context23 .menu .item').tab({ context: $('#context23') });
-      $('#context24 .menu .item').tab({ context: $('#context24') });
-      $('#context25 .menu .item').tab({ context: $('#context25') });
-      $('#context26 .menu .item').tab({ context: $('#context26') });
-      $('#context27 .menu .item').tab({ context: $('#context27') });
-      $('#context28 .menu .item').tab({ context: $('#context28') });
-      $('#context29 .menu .item').tab({ context: $('#context29') });
-      $('#context30 .menu .item').tab({ context: $('#context30') });
-      $('#context31 .menu .item').tab({ context: $('#context31') });
-      $('#context32 .menu .item').tab({ context: $('#context32') });
-
-      // $('#context33 .menu .item').tab({
-      //     history : true,
-      //     childrenOnly: true,
-      //     context: $('#context33') });
-
-       $('#request_feature .menu .item').tab({
-           history : true,
-           // auto: true,
-           // path: '/welcome/pages/request_features.jsp',
-           context: $('#request_feature') });
-
-
-      $('#context34 .menu .item').tab({ context: $('#context34') });
-      $('#context35 .menu .item').tab({ context: $('#context35') });
-      $('#context36 .menu .item').tab({ context: $('#context36') });
-      $('#context37 .menu .item').tab({ context: $('#context37') });
-      $('#context38 .menu .item').tab({ context: $('#context38') });
-      $('#context39 .menu .item').tab({ context: $('#context39') });
-      $('#context40 .menu .item').tab({ context: $('#context40') });
-      $('#context41 .menu .item').tab({ context: $('#context41') });
-      $('#context42 .menu .item').tab({ context: $('#context42') });
-      $('#context43 .menu .item').tab({ context: $('#context43') });
-      $('#context44 .menu .item').tab({ context: $('#context44') });
-      $('#context45 .menu .item').tab({ context: $('#context45') });
-      $('#context46 .menu .item').tab({ context: $('#context46') });
-      $('#context47 .menu .item').tab({ context: $('#context47') });
-      $('#context48 .menu .item').tab({ context: $('#context48') });
-      $('#context49 .menu .item').tab({ context: $('#context49') });
+      // $('#context1 .menu .item').tab({ history : true, context: $('#context1') });  //collective resources deleted
+      $('#context2 .menu .item').tab({ history : true, context: $('#context2') });
+      $('#context3 .menu .item').tab({ history : true, context: $('#context3') });
+      $('#context4 .menu .item').tab({ history : true, context: $('#context4') });
+      $('#context5 .menu .item').tab({ history : true, context: $('#context5') });
+      $('#context6 .menu .item').tab({ history : true, context: $('#context6') });
+      $('#context7 .menu .item').tab({ history : true, context: $('#context7') });
+      $('#context8 .menu .item').tab({ history : true, context: $('#context8') });
+      $('#context9 .menu .item').tab({ history : true, context: $('#context9') });
+      $('#context10 .menu .item').tab({ history : true, context: $('#context10') });
+      $('#context11 .menu .item').tab({ history : true, context: $('#context11') });
+      $('#context12 .menu .item').tab({ history : true, context: $('#context12') });
+      $('#context13 .menu .item').tab({ history : true, context: $('#context13') });
+      $('#context14 .menu .item').tab({ history : true, context: $('#context14') });
+      $('#context15 .menu .item').tab({ history : true, context: $('#context15') });
+      $('#context16 .menu .item').tab({ history : true, context: $('#context16') });
+      $('#context17 .menu .item').tab({ history : true, context: $('#context17') });
+      $('#context18 .menu .item').tab({ history : true, context: $('#context18') });
+      $('#context19 .menu .item').tab({ history : true, context: $('#context19') });
+      $('#context20 .menu .item').tab({ history : true, context: $('#context20') });
+      $('#context21 .menu .item').tab({ history : true, context: $('#context21') });
+      $('#context22 .menu .item').tab({ history : true, context: $('#context22') });
+      $('#context23 .menu .item').tab({ history : true, context: $('#context23') });
+      $('#context24 .menu .item').tab({ history : true, context: $('#context24') });
+      $('#context25 .menu .item').tab({ history : true, context: $('#context25') });
+      $('#context26 .menu .item').tab({ history : true, context: $('#context26') });
+      $('#context27 .menu .item').tab({ history : true, context: $('#context27') });
+      $('#context28 .menu .item').tab({ history : true, context: $('#context28') });
+      $('#context29 .menu .item').tab({ history : true, context: $('#context29') });
+      $('#context30 .menu .item').tab({ history : true, context: $('#context30') });
+      $('#context31 .menu .item').tab({ history : true, context: $('#context31') });
+      $('#context32 .menu .item').tab({ history : true, context: $('#context32') });
+      $('#context34 .menu .item').tab({ history : true, context: $('#context34') });
+      $('#context35 .menu .item').tab({ history : true, context: $('#context35') });
+      $('#context36 .menu .item').tab({ history : true, context: $('#context36') });
+      $('#context37 .menu .item').tab({ history : true, context: $('#context37') });
+      $('#context38 .menu .item').tab({ history : true, context: $('#context38') });
+      $('#context39 .menu .item').tab({ history : true, context: $('#context39') });
+      $('#context40 .menu .item').tab({ history : true, context: $('#context40') });
+      $('#context41 .menu .item').tab({ history : true, context: $('#context41') });
+      $('#context42 .menu .item').tab({ history : true, context: $('#context42') });
+      $('#context43 .menu .item').tab({ history : true, context: $('#context43') });
+      $('#context44 .menu .item').tab({ history : true, context: $('#context44') });
+      $('#context45 .menu .item').tab({ history : true, context: $('#context45') });
+      $('#context46 .menu .item').tab({ history : true, context: $('#context46') });
+      $('#context47 .menu .item').tab({ history : true, context: $('#context47') });
+      $('#context48 .menu .item').tab({ history : true, context: $('#context48') });
+      $('#context49 .menu .item').tab({ history : true, context: $('#context49') });
 
 
       $('#adsProgress').progress('increment');
@@ -211,7 +197,7 @@
 
 
        var guid = generateUID();
-       alert(guid);
+       console.log("Generated GUID: " + guid);
        $("#ticketNumber").text(guid);
        $("#messageField").val("Describe your request here...");
 
@@ -223,7 +209,7 @@
            $('#initial_settings_config').modal('hide');
        });
 
-
+       /* Google Analytics tie-in snippet */
        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -232,35 +218,10 @@
        ga('create', 'UA-97417760-1', 'auto');
        ga('send', 'pageview');
 
-
-      //  function start() {
-      //      // Initializes the client with the API key and the Drive API.
-      //      gapi.client.init({
-      //          'apiKey': 'AIzaSyCecGDdAmGexEKXYGYnZqEGSuPZPFOCrEg',
-      //          'discoveryDocs': ['https://www.googleapis.com/discovery/v1/apis/drive/v2/rest']
-      //      }).then(function() {
-      //          // Executes an API request, and returns a Promise.
-      //          // The method name `language.translations.list` comes from the API discovery.
-      //          return gapi.client.drive.files.get({
-      //              fileId: '0B_lD7FHorWGzNDNHXzlaLWNGR2M'
-      //          });
-      //      }).then(function(resp) {
-      //          console.log('Title: ' + resp.title);
-      //          console.log('Description: ' + resp.description);
-      //          console.log('MIME type: ' + resp.mimeType);
-      //      }, function(reason) {
-      //          console.log('Error: ' + reason.result.error.message);
-      //      });
-      // }
-      //
-      //
-      //  // Loads the JavaScript client library and invokes `start` afterwards.
-      //  gapi.load('client', start);
-
-       //$.getScript('//apis.google.com/js/api.js', function() {
-           gapi.load('auth:client', handleClientLoad);
-       //});
-
+       /*
+       * Google Drive API Logic
+       * */
+       gapi.load('auth:client', handleClientLoad);
 
        function handleClientLoad() {
            gapi.client.setApiKey('AIzaSyCecGDdAmGexEKXYGYnZqEGSuPZPFOCrEg');
@@ -272,19 +233,16 @@
        }
 
        function makeRequest() {
-           var fileId = '0B_lD7FHorWGzNDNHXzlaLWNGR2M';
+           var fileId = '0B_lD7FHorWGzVWtIUlRWai1oNFE';
            var request = gapi.client.drive.files.get({'fileId': fileId});
 
            request.execute(function (resp) {
-               console.log('Title: ' + resp.title);
-                        console.log('Description: ' + resp.description);
-                        console.log('MIME type: ' + resp.mimeType);
+               $('#title1').replaceWith(resp.title);
+               $('#description1').replaceWith(resp.description);
+               $('#date1').replaceWith(resp.createdDate);
+
            });
-
        }
-
-
-
 
        });  // end document.ready
 })(jQuery);  // end function($)
@@ -297,12 +255,8 @@ function toggleSidebar() {
    })(jQuery);
 }
 
-function correctCaptcha (response) {
-    alert(response);
-}
-
 function recaptchaCallback(userResponse) {
-    alert(userResponse);
+    console.log("reCAPTCHA user response: " + userResponse);
 
     $.ajax({
         url: '/welcome/validateCaptcha?userResponse=' + userResponse,
@@ -313,14 +267,14 @@ function recaptchaCallback(userResponse) {
             var isUserValid = data;
             console.log("isUserValid reCaptcha response from server: " + data);
             if(data === "true") {
-                alert("Cash me outside!");
+                console.log("reCaptcha success: " + data);
                 $('#submitContactBtn').removeAttr('disabled');
                 //$('#submitContactBtn').attr('.notAllowedCursor', '');
             }
 
         },
-        fail: function() {
-            alert( "error" );
+        fail: function(e) {
+            console.error( "reCaptcha error" + e );
         }
     });
 
@@ -343,10 +297,6 @@ function sendEmail() {
         }).fail(function(){
             console.log("error");
     });
-}
-
-function dec2bin(dec){
-   return (dec >>> 0).toString(2);
 }
 
 function generateUID() {
