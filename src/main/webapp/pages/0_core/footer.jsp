@@ -4,8 +4,8 @@
 --%>
 
 
-<div id="footer" class="footerWidth footerColor" style=" border-radius: 5px; filter: none;">
+<div id="footer" class="footerWidth footerColor" >
     <div>
-        &copy; 2015 - ArcologyDesigns Studio
+        &copy; 2015 - GrowYourCareer.com
     </div>
 </div>

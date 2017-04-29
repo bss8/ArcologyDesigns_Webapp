@@ -23,7 +23,7 @@
             like to personally welcome you to GrowYourCareer.com.</p>
         <p>This site a long-term and personal undertaking for me.
             Something I plan to grow and develop for years to come.</p>
-        <p>While you may notice an emphasis on IT topics and software development, make no mistake - this site is
+        <p>While you may notice an emphasis on IT and software development topics, make no mistake - this site is
         all about taking your career, regardless of the field, to the next level.</p>
 
         <p>...about my journey... </p>

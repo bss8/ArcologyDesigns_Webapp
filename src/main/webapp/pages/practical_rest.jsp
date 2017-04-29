@@ -1,8 +1,6 @@
-<%--
-  User: Boris
-  Date: 12/19/2015  @ 10:50 PM
---%>
+
 <div id="context2">
+
     <div class="ui secondary menu">
         <a class="item active" data-tab="first">Demo</a>
         <a class="item" data-tab="second">How it works</a>
@@ -65,3 +63,12 @@
     </div>
 </div>
 
+<script>
+
+    document.addEventListener('DOMContentLoaded', function() {
+        setTimeout(function(){
+            loadAzureData();
+        }, 200);
+    }, false);
+
+</script>

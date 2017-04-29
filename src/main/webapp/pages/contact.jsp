@@ -11,7 +11,7 @@
     </div>
     <div class="ui tab segment active" data-tab="first">
         <div>
-            <h3 class="blue">Find ArcologyDesigns on these platforms:</h3>
+            <h3 class="blue">Find me on these platforms:</h3>
             <br/>
             <a href="http://www.youtube.com/c/GrowYourCareer">
                 <i class="youtube icon huge red"></i>

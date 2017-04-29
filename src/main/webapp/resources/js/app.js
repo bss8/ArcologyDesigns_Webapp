@@ -41,33 +41,8 @@
       });
 
 
-      // Get data from MS DB via HTTP GET Ajax call
-      // var dataSet = [];
-      // $.ajax({
-      //    type: "GET",
-      //    dataType: "json",
-      //    url: "/welcome/azureTest",
-      //    success: function(data){
-      //       //alert(JSON.stringify(data));
-      //       dataSet = data.arrayName;
-      //
-      //       $('#example').DataTable( {
-      //          data: dataSet,
-      //          fixedColumns: true,
-      //          responsive: true,
-      //          "columns": [
-      //             { "data": "ID" },
-      //             { "data": "NAME" },
-      //             { "data": "EMAIL" },
-      //             { "data": "JOB_POSITION" },
-      //             { "data": "SUBJECT_OF_INTEREST" }
-      //          ]
-      //       } );
-      //
-      //       for(var p = 0; p < 4; p++)
-      //          $('#adsProgress').progress('increment');
-      //    }
-      // });
+       for (var p = 0; p < 4; p++)
+           $('#adsProgress').progress('increment');
 
 
       $('.select_a_base').dropdown('set selected', ['2', '3']);
@@ -78,19 +53,44 @@
 
       $('#submitBaseConversion').on('click', function () {
          //console.log($('.select_a_base').dropdown('get value').toString());
-         $.ajax({
-             type: "POST",
-             dataType: "json",
-             url: "/welcome/convertBases",
-             data: {
-                numToConvert: $('#integer_input').val(),
-                fromThisBase: $('#fromThisBase').dropdown('get value'),
-                toTheseBases: $('.select_a_base').dropdown('get value').toString()
-             },
-             success: function(data){
+          var num = $('#integer_input').val();
+          var fromBase = $('#fromThisBase').dropdown('get value');
+          var toBase = $('.select_a_base').dropdown('get value');
 
-             }
-         })
+          console.log("Convert " + num + " from base " + fromBase + " to base " + toBase);
+          var baseConversionObj = "/welcome/convertBases?numToConvert=" + num
+              + "&fromThisBase=" + fromBase
+              + "&toTheseBases=" + toBase;
+          console.log("base conversion obj: " + baseConversionObj);
+
+
+          $.ajax({
+              type: "GET",
+              dataType: "json",
+              url: baseConversionObj,
+              success: function(response) {
+                  console.log("base conversion response: " + response);
+
+                  dataSet = response.jsonbasedata;
+                  console.log(dataSet);
+                  $('#baseResults').dataTable( {
+                     destroy: true,
+                     data: dataSet,
+                     fixedColumns: true,
+                     responsive: true,
+                     "columns": [
+                        { "data": "base2" },
+                        { "data": "base3" }
+                     ]
+                  });
+
+
+              },
+              fail: function(){
+                  console.log("base conversion error!");
+              }
+          });
+
       });
 
       // initialize tabs so they swap content
@@ -157,32 +157,6 @@
       $('.ui.dropdown').dropdown();
       $('#adsProgress').progress('increment');
 
-      <!-- TODO: extract to page specific script -->
-      // var input = document.getElementById("integer_input");
-      //
-      // input.onkeypress = function(e) {
-      //    switch (e.keyCode){
-      //       case 45:
-      //          return this.value.length == 0 ? true : false;
-      //          break;
-      //       case 48:
-      //       case 49:
-      //       case 50:
-      //       case 51:
-      //       case 52:
-      //       case 53:
-      //       case 54:
-      //       case 55:
-      //       case 56:
-      //       case 57:
-      //          return true;
-      //          break;
-      //       default:
-      //          $("#integerErrorMsg").html("+/- Integers Only").show().fadeOut(1000);
-      //          return false;
-      //          break;
-      //    }  // end switch
-      // };  // end onkeypress
 
 
        $("#inprogress").click(function(){
@@ -309,7 +283,38 @@ function generateUID() {
     return firstPart + secondPart;
 }
 
+/*
+ * Cannot be defined only inside the document.ready handler's scope, need to move the functions outside
+ * if we want to call it via inline script on page
+ * */
+function loadAzureData() {
 
+    // Get data from MS DB via HTTP GET Ajax call
+    var dataSet = [];
+    $.ajax({
+        type: "GET",
+        dataType: "json",
+        url: "/welcome/azureTest",
+        success: function (data) {
+            //alert(JSON.stringify(data));
+            dataSet = data.arrayName;
+            console.log("azure dataSet: " + dataSet);
+            console.log("azure data: " + data);
+            $('#example').DataTable({
+                data: dataSet,
+                fixedColumns: true,
+                responsive: true,
+                "columns": [
+                    {"data": "ID"},
+                    {"data": "NAME"},
+                    {"data": "EMAIL"},
+                    {"data": "JOB_POSITION"},
+                    {"data": "SUBJECT_OF_INTEREST"}
+                ]
+            });
+        }
+    });
+}
 
 
 

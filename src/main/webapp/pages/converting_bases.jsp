@@ -89,7 +89,27 @@
                 <hr/>
 
                 <div>
-                    RESULTS
+                    RESULTS:
+
+                    <div>
+                        <table id="baseResults" class="display" cellspacing="0" width="100%">
+                            <thead>
+                            <tr>
+                                <th>Base 2</th>
+                                <th>Base 3</th>
+                            </tr>
+                            </thead>
+                            <%--<tfoot>--%>
+                            <%--<tr>--%>
+                                <%--<th>Base 2</th>--%>
+                                <%--<th>Base </th>--%>
+
+                            <%--</tr>--%>
+                            <%--</tfoot>--%>
+                        </table>
+                    </div>
+
+
                 </div>
             </div>
 
@@ -118,3 +138,32 @@
         <div class="ui bottom attached tab segment" data-tab="third/c">3C</div>
     </div>
 </div>
+
+<script>
+    <!-- TODO: extract to page specific script -->
+    var input = document.getElementById("integer_input");
+
+    input.onkeypress = function(e) {
+        switch (e.keyCode){
+            case 45:
+                return this.value.length == 0 ? true : false;
+                break;
+            case 48:
+            case 49:
+            case 50:
+            case 51:
+            case 52:
+            case 53:
+            case 54:
+            case 55:
+            case 56:
+            case 57:
+                return true;
+                break;
+            default:
+                $("#integerErrorMsg").html("+/- Integers Only").show().fadeOut(1000);
+                return false;
+                break;
+        }  // end switch
+    };  // end onkeypress
+</script>

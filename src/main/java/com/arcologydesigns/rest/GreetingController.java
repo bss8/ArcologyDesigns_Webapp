@@ -30,7 +30,7 @@ public class GreetingController {
 
     //TODO: modify this to capture name and store locally to welcome users
     @RequestMapping("/greeting")
-    public Greeting greeting(@RequestParam(value="name", defaultValue="World") String name) throws MessagingException {
+    public Greeting greeting(@RequestParam(value="name", defaultValue="World") String name) {
         return new Greeting(counter.incrementAndGet(),
                 String.format(template, name));
     } // end greeting()

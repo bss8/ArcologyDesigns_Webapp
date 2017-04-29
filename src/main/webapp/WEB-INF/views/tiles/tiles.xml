@@ -106,7 +106,7 @@
     <!-- REST Example Page -->
     <definition name="restExample" extends="base-definition">
         <put-attribute name="title" value="REST Example" />
-        <put-attribute name="body" value="/pages/rest_table_example.jsp" />
+        <put-attribute name="body" value="/pages/practical_rest.jsp" />
     </definition>
 
     <!-- JavaScript Example Page -->
@@ -182,13 +182,13 @@
     </definition>
 
     <!-- Design Philosophy Page -->
-    <definition name="restExample" extends="base-definition">
+    <definition name="designPhilosophy" extends="base-definition">
         <put-attribute name="title" value="My Design Philosophy" />
         <put-attribute name="body" value="/pages/design_philosophy.jsp" />
     </definition>
 
     <!-- Architecture Resources Page -->
-    <definition name="restExample" extends="base-definition">
+    <definition name="architectureResources" extends="base-definition">
         <put-attribute name="title" value="REST Example" />
         <put-attribute name="body" value="/pages/architecture_resources.jsp" />
     </definition>

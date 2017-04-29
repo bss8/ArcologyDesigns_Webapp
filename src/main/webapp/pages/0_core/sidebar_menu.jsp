@@ -11,7 +11,7 @@
 
     <div class="item">
         <a class="ui logo icon image" >
-            <img style="border-radius: 20%; "
+            <img style="border-radius: 20%;"
                     src="${pageContext.request.contextPath}/resources/images/arco_logo_s.jpg">
         </a>
     </div>
@@ -53,7 +53,7 @@
     </div>
 
     <div class="item">
-        <div class=" header">Career Resources &nbsp;&nbsp;&nbsp;&nbsp;<i class="lince chart icon"></i></div>
+        <div class=" header">Career Resources &nbsp;&nbsp;&nbsp;&nbsp;<i class="line chart icon"></i></div>
 
         <div class="menu">
             <a class="item" href="${pageContext.request.contextPath}/resumes">Resumes & Portfolios</a>
