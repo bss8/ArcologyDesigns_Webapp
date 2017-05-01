@@ -2,36 +2,43 @@
   User: Boris  Date: 12/19/2015 @ 11:03 PM
 --%>
 
-<div class="ui masthead vertical segment"
-     style="margin-left: 280px; margin-bottom: 0; padding-bottom: 0; border: none;">
+<%--<div class=""--%>
+     <%--style="margin-left: 280px; margin-bottom: 0; padding-bottom: 0; border: none;">--%>
 
-    <div class="ui menu" style="margin-right: 40px;">
+    <div id="horizontalMenu" class="ui menu" >
         <a id="sidebar_toggle" class="view-ui item" data-content="To anchor/pin the sidebar menu, refresh the page (F5)" data-variation="wide inverted large"
            onclick="toggleSidebar()" >
             <i class="sidebar icon" ></i> Menu
         </a>
-        <%--<a class="item">Home</a>--%>
-        <div class="ui pointing dropdown link item">
+        <div class="ui dropdown link item">
             <span class="text">Tools </span>
             <i class="dropdown icon"></i>
             <div class="menu">
                 <div class="header">Categories</div>
-                <div class="item">
+                <div class="ui dropdown item">
+                    Themes
                     <i class="dropdown icon"></i>
-                    <span class="text"><i class="options icon"></i>&nbsp; Options</span>
                     <div class="menu">
-                        <div class="header">Mens</div>
-                        <div class="item">Shirts</div>
-                        <div class="item">Pants</div>
-                        <div class="item">Jeans</div>
-                        <div class="item">Shoes</div>
-                        <div class="divider"></div>
-                        <div class="header">Options </div>
-                        <div class="item">Dresses</div>
-                        <div class="item">Shoes</div>
-                        <div class="item">Bags</div>
+                        <%--<a class="item"><i class="edit icon"></i> Edit Profile</a>--%>
+                        <%--<a class="item"><i class="globe icon"></i> Choose Language</a>--%>
+                        <%--<a class="item"><i class="settings icon"></i> Account Settings</a>--%>
+                        <div id="darkTheme" class="item">Dark</div>
+                        <div id="redTheme" class="item">Red</div>
+                        <div id="greenTheme" class="item">Green</div>
+                        <div id="defaultTheme" class="item">Default</div>
                     </div>
                 </div>
+                <%--<div class="item">--%>
+                    <%--<i class="dropdown icon"></i>--%>
+                    <%--<div class="ui dropdown item"><i class="options icon"></i>&nbsp; Themes--%>
+                        <%--<div class="menu">--%>
+                            <%--<div id="darkTheme" class="item">Dark</div>--%>
+                            <%--<div id="redTheme" class="item">Red</div>--%>
+                            <%--<div id="greenTheme" class="item">Green</div>--%>
+                            <%--<div id="defaultTheme" class="item">Default</div>--%>
+                        <%--</div>--%>
+                    <%--</div>--%>
+                <%--</div>--%>
                 <div class="item">Home Goods</div>
                 <div class="item">Bedroom</div>
                 <div class="divider"></div>
@@ -61,7 +68,7 @@
         </div>
     </div>
     </div>
-</div>
+<%--</div>--%>
 
 <div class="ui small red active progress" id="adsProgress" data-value="0" data-total="6"
      style="margin-left: 280px; width: auto; margin-right: 40px;">

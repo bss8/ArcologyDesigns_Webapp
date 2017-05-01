@@ -53,7 +53,7 @@
             <%--</script>--%>
         <%--</div>--%>
 
-        <div class="main ui container" style="margin-left: 280px !important; width: auto; padding-right: 40px;">
+        <div class="main ui container " style="margin-left:280px !important; ">
             <div class="ui tab segment active" data-tab="release_notes" style="margin-top: 14px;">
                 <jsp:include page="pages/release_notes.jsp" flush="true" />
             </div>

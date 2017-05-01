@@ -14,7 +14,13 @@
 body              { background: #B6B6B6; }
 a                 { cursor: pointer; }
 
-
+.main.ui.container {
+   width: auto;
+   padding-right: 40px;
+}
+#horizontalMenu {
+   margin-right: 40px;  margin-bottom: 0; padding-bottom: 0; border: none;
+}
 #integerErrorMsg  { color: #B81D18; }
 .ui.progress      { margin: 1em 0; }
 .ui.vertical.menu { font-size: large; }
@@ -48,6 +54,13 @@ a                 { cursor: pointer; }
 .prominentText {
    font-weight: 700;
    font-size: large;
+}
+
+.expandContent {
+   margin-left: 40px !important;
+}
+.contractContent {
+   margin-left: 280px !important;
 }
 
 button:disabled {

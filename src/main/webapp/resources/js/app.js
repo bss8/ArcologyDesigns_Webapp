@@ -1,5 +1,10 @@
 /**
  * Created by Boris on 12/19/2015.
+ * fn property is just an alias to the prototype property
+ * The jQuery identifier (or $) is just a constructor function
+ * and all instances created with it, inherit from the constructor's prototype.
+ * jQuery.fn === jQuery.prototype
+ * 'window.foo = foo' gives 'foo' a global scope
  */
 
 (function($){
@@ -218,14 +223,71 @@
            });
        }
 
+       $('#darkTheme').click(function() {
+           $('.ui.inverted.menu').css("background", "#1B1C1D");
+           $('.footerColor').css("background", "#1B1C1D");
+       });
+       $('#redTheme').click(function() {
+           $('.ui.inverted.menu').css("background", "#b70611");
+           $('.footerColor').css("background", "#b70611");
+       });
+       $('#greenTheme').click(function() {
+           $('.ui.inverted.menu').css("background", "#338028");
+           $('.footerColor').css("background", "#338028");
+       });
+       $('#defaultTheme').click(function() {
+           $('.ui.inverted.menu').css("background", "#004687");
+           $('.footerColor').css("background", "#004687");
+       });
+
+
+
+       $('.main.ui.container').attr("style", "margin-left: 280px !important;");
+       $('#horizontalMenu').attr("style", "margin-left: 280px !important;");
+
        });  // end document.ready
 })(jQuery);  // end function($)
 
+
+// $.fn.clicktoggle = function(a, b) {
+//     return this.each(function () {
+//         var clicked = false;
+//         $(this).bind("click", function () {
+//             if(clicked) {
+//                 clicked = false;
+//                 return b.apply(this, arguments);
+//             }
+//             clicked = true;
+//             return a.apply(this, arguments);
+//         })
+//     });
+// };
+
+function contractView() {
+    alert("contract");
+    $('.main.ui.container').attr("style", "margin-left: 280px !important;");
+    $('#horizontalMenu').attr("style", "margin-left: 280px !important;");
+}
+
+function expandView() {
+    alert("expand");
+    $('.main.ui.container').attr("style", "margin-left: 40px !important;");
+    $('#horizontalMenu').attr("style", "margin-left: 40px !important;");
+}
+
 function toggleSidebar() {
    (function toggleSidebar($){
+
+       if( $('.main.ui.container').attr("style") === "margin-left: 280px !important;" ) {
+           expandView();
+       } else {
+           contractView();
+       }
+
       $('#adsMainSidebar').sidebar('toggle');
       $('.ui.uncover.sidebar').css("z-index","200");
       $('body').removeClass("pushable");
+
    })(jQuery);
 }
 
