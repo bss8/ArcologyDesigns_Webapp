@@ -14,10 +14,35 @@
 body              { background: #B6B6B6; }
 a                 { cursor: pointer; }
 
+/*
+* Excellent solution for Semantic UI issues #4124 and #4873
+* Author; ascheffe-umd
+* https://github.com/Semantic-Org/Semantic-UI/issues/4873 */
+.ui.message .list:not(.ui) li:before {
+   position: absolute;
+   content: "\2022";
+   left: -1em;
+   height: 100%;
+   vertical-align: baseline;
+}
+
+#horizontalMenu {
+   margin-top: 0;
+}
+
+.lightgray {
+   color: lightgray;
+}
+
 .main.ui.container {
    width: auto;
    padding-right: 40px;
 }
+
+#adsProgress {
+   width: auto; margin-right: 40px;
+}
+
 #horizontalMenu {
    margin-right: 40px;  margin-bottom: 0; padding-bottom: 0; border: none;
 }
@@ -25,6 +50,9 @@ a                 { cursor: pointer; }
 .ui.progress      { margin: 1em 0; }
 .ui.vertical.menu { font-size: large; }
 .ui.inverted.menu { background: #004687; }
+.siteBlueColor  { color: #004687; }
+
+
 .siteHeaderColor  { color: #B81D18; }
 .custom_hr_style {
    border-style: double;

@@ -20,6 +20,8 @@
         <b>Site Content &nbsp;&nbsp;&nbsp;&nbsp;<i class="pointing down icon"></i></b>
     </a>
 
+    <a id="logInMenuButton" class="item"></a>
+
     <div class="item">
         <div class="header">New in 1.0</div>
 
@@ -37,7 +39,7 @@
         <div class="menu">
             <a class="item" href="${pageContext.request.contextPath}/products">Products and Services</a>
             <a class="item" href="${pageContext.request.contextPath}/contact">
-                <i class="mail icon red"></i> Contact (+ tutorial)</a>
+                <i class="mail icon white"></i> Contact (+ tutorial)</a>
             <a class="item" href="${pageContext.request.contextPath}/about">About the Author</a>
         </div>
 

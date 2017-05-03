@@ -10,11 +10,33 @@
 (function($){
    $(document).ready(function () {
 
+       var isUserLoggedIn = false;
+       var logInMenuButton = $('#logInMenuButton');
+
+       if(isUserLoggedIn === false) {
+           logInMenuButton.text("Sign In");
+       } else {
+           $('#logInMenuButton').text("Log Out");
+       }
+
+       logInMenuButton.click(function () {
+           $('#loginModal').modal('show');
+       });
+
+       $('#signUpOpen').click(function () {
+          $('#loginModal').modal('hide');
+          $('#signUpModal').modal('show');
+       });
+
+
+
       if(typeof(Storage) !== "undefined") {
          // Code for localStorage/sessionStorage.
          var visitedBefore = localStorage.getItem("visitedBefore");
          console.log("var visitedBefore = ", visitedBefore);
          var userName = localStorage.getItem("userName");
+         var menuColor = localStorage.getItem("menuColor");
+         var footerColor = localStorage.getItem("footerColor");
 
          if(visitedBefore == undefined) {
             localStorage.setItem("visitedBefore", true);
@@ -23,6 +45,9 @@
             $('#initial_settings_config').modal('show');
          } else {
              $("#welcomeUser").text("Welcome, " + userName + "!");
+             $('.ui.inverted.menu').css("background", menuColor);
+             $('.footerColor').css("background", footerColor);
+
          }
       } else {
          // Sorry! No Web Storage support..
@@ -45,9 +70,9 @@
           $(this).parent().hide();
       });
 
-
-       for (var p = 0; p < 4; p++)
-           $('#adsProgress').progress('increment');
+      var adsProgress = $('#adsProgress');
+      for (var p = 0; p < 4; p++)
+          adsProgress.progress('increment');
 
 
       $('.select_a_base').dropdown('set selected', ['2', '3']);
@@ -63,16 +88,16 @@
           var toBase = $('.select_a_base').dropdown('get value');
 
           console.log("Convert " + num + " from base " + fromBase + " to base " + toBase);
-          var baseConversionObj = "/welcome/convertBases?numToConvert=" + num
+          var baseConversionUrl = "/welcome/convertBases?numToConvert=" + num
               + "&fromThisBase=" + fromBase
               + "&toTheseBases=" + toBase;
-          console.log("base conversion obj: " + baseConversionObj);
+          console.log("base conversion obj: " + baseConversionUrl);
 
 
           $.ajax({
               type: "GET",
               dataType: "json",
-              url: baseConversionObj,
+              url: baseConversionUrl,
               success: function(response) {
                   console.log("base conversion response: " + response);
 
@@ -103,56 +128,56 @@
       $('.testContent.menu .item').tab({history:false});
 
       // $('#context1 .menu .item').tab({ history : true, context: $('#context1') });  //collective resources deleted
-      $('#context2 .menu .item').tab({ history : true, context: $('#context2') });
-      $('#context3 .menu .item').tab({ history : true, context: $('#context3') });
-      $('#context4 .menu .item').tab({ history : true, context: $('#context4') });
-      $('#context5 .menu .item').tab({ history : true, context: $('#context5') });
-      $('#context6 .menu .item').tab({ history : true, context: $('#context6') });
-      $('#context7 .menu .item').tab({ history : true, context: $('#context7') });
-      $('#context8 .menu .item').tab({ history : true, context: $('#context8') });
-      $('#context9 .menu .item').tab({ history : true, context: $('#context9') });
-      $('#context10 .menu .item').tab({ history : true, context: $('#context10') });
-      $('#context11 .menu .item').tab({ history : true, context: $('#context11') });
-      $('#context12 .menu .item').tab({ history : true, context: $('#context12') });
-      $('#context13 .menu .item').tab({ history : true, context: $('#context13') });
-      $('#context14 .menu .item').tab({ history : true, context: $('#context14') });
-      $('#context15 .menu .item').tab({ history : true, context: $('#context15') });
-      $('#context16 .menu .item').tab({ history : true, context: $('#context16') });
-      $('#context17 .menu .item').tab({ history : true, context: $('#context17') });
-      $('#context18 .menu .item').tab({ history : true, context: $('#context18') });
-      $('#context19 .menu .item').tab({ history : true, context: $('#context19') });
-      $('#context20 .menu .item').tab({ history : true, context: $('#context20') });
-      $('#context21 .menu .item').tab({ history : true, context: $('#context21') });
-      $('#context22 .menu .item').tab({ history : true, context: $('#context22') });
-      $('#context23 .menu .item').tab({ history : true, context: $('#context23') });
-      $('#context24 .menu .item').tab({ history : true, context: $('#context24') });
-      $('#context25 .menu .item').tab({ history : true, context: $('#context25') });
-      $('#context26 .menu .item').tab({ history : true, context: $('#context26') });
-      $('#context27 .menu .item').tab({ history : true, context: $('#context27') });
-      $('#context28 .menu .item').tab({ history : true, context: $('#context28') });
-      $('#context29 .menu .item').tab({ history : true, context: $('#context29') });
-      $('#context30 .menu .item').tab({ history : true, context: $('#context30') });
-      $('#context31 .menu .item').tab({ history : true, context: $('#context31') });
-      $('#context32 .menu .item').tab({ history : true, context: $('#context32') });
-      $('#context34 .menu .item').tab({ history : true, context: $('#context34') });
-      $('#context35 .menu .item').tab({ history : true, context: $('#context35') });
-      $('#context36 .menu .item').tab({ history : true, context: $('#context36') });
-      $('#context37 .menu .item').tab({ history : true, context: $('#context37') });
-      $('#context38 .menu .item').tab({ history : true, context: $('#context38') });
-      $('#context39 .menu .item').tab({ history : true, context: $('#context39') });
-      $('#context40 .menu .item').tab({ history : true, context: $('#context40') });
-      $('#context41 .menu .item').tab({ history : true, context: $('#context41') });
-      $('#context42 .menu .item').tab({ history : true, context: $('#context42') });
-      $('#context43 .menu .item').tab({ history : true, context: $('#context43') });
-      $('#context44 .menu .item').tab({ history : true, context: $('#context44') });
-      $('#context45 .menu .item').tab({ history : true, context: $('#context45') });
-      $('#context46 .menu .item').tab({ history : true, context: $('#context46') });
-      $('#context47 .menu .item').tab({ history : true, context: $('#context47') });
-      $('#context48 .menu .item').tab({ history : true, context: $('#context48') });
-      $('#context49 .menu .item').tab({ history : true, context: $('#context49') });
+      $('#context2 ').tab({ history : true, context: $('#context2') });
+      $('#context3 ').tab({ history : true, context: $('#context3') });
+      $('#context4 ').tab({ history : true, context: $('#context4') });
+      $('#context5 ').tab({ history : true, context: $('#context5') });
+      $('#context6 ').tab({ history : true, context: $('#context6') });
+      $('#context7 ').tab({ history : true, context: $('#context7') });
+      $('#context8 ').tab({ history : true, context: $('#context8') });
+      $('#context9 ').tab({ history : true, context: $('#context9') });
+      $('#context10 ').tab({ history : true, context: $('#context10') });
+      $('#context11 ').tab({ history : true, context: $('#context11') });
+      $('#context12 ').tab({ history : true, context: $('#context12') });
+      $('#context13 ').tab({ history : true, context: $('#context13') });
+      $('#context14 ').tab({ history : true, context: $('#context14') });
+      $('#context15 ').tab({ history : true, context: $('#context15') });
+      $('#context16 ').tab({ history : true, context: $('#context16') });
+      $('#context17 ').tab({ history : true, context: $('#context17') });
+      $('#context18 ').tab({ history : true, context: $('#context18') });
+      $('#context19 ').tab({ history : true, context: $('#context19') });
+      $('#context20 ').tab({ history : true, context: $('#context20') });
+      $('#context21 ').tab({ history : true, context: $('#context21') });
+      $('#context22 ').tab({ history : true, context: $('#context22') });
+      $('#context23 ').tab({ history : true, context: $('#context23') });
+      $('#context24 ').tab({ history : true, context: $('#context24') });
+      $('#context25 ').tab({ history : true, context: $('#context25') });
+      $('#context26 ').tab({ history : true, context: $('#context26') });
+      $('#context27 ').tab({ history : true, context: $('#context27') });
+      $('#context28 ').tab({ history : true, context: $('#context28') });
+      $('#context29 ').tab({ history : true, context: $('#context29') });
+      $('#context30 ').tab({ history : true, context: $('#context30') });
+      $('#context31 ').tab({ history : true, context: $('#context31') });
+      $('#context32 ').tab({ history : true, context: $('#context32') });
+      $('#context34 ').tab({ history : true, context: $('#context34') });
+      $('#context35 ').tab({ history : true, context: $('#context35') });
+      $('#context36 ').tab({ history : true, context: $('#context36') });
+      $('#context37 ').tab({ history : true, context: $('#context37') });
+      $('#context38 ').tab({ history : true, context: $('#context38') });
+      $('#context39 ').tab({ history : true, context: $('#context39') });
+      $('#context40 ').tab({ history : true, context: $('#context40') });
+      $('#context41 ').tab({ history : true, context: $('#context41') });
+      $('#context42 ').tab({ history : true, context: $('#context42') });
+      $('#context43 ').tab({ history : true, context: $('#context43') });
+      $('#context44 ').tab({ history : true, context: $('#context44') });
+      $('#context45 ').tab({ history : true, context: $('#context45') });
+      $('#context46 ').tab({ history : true, context: $('#context46') });
+      $('#context47 ').tab({ history : true, context: $('#context47') });
+      $('#context48 ').tab({ history : true, context: $('#context48') });
+      $('#context49 ').tab({ history : true, context: $('#context49') });
 
 
-      $('#adsProgress').progress('increment');
+       adsProgress.progress('increment');
 
       $('.ui.button').on('click', function() {
           // programmatically activating tab
@@ -160,7 +185,7 @@
       });
 
       $('.ui.dropdown').dropdown();
-      $('#adsProgress').progress('increment');
+       adsProgress.progress('increment');
 
 
 
@@ -223,21 +248,36 @@
            });
        }
 
+
+
        $('#darkTheme').click(function() {
            $('.ui.inverted.menu').css("background", "#1B1C1D");
            $('.footerColor').css("background", "#1B1C1D");
+
+           localStorage.setItem("menuColor", "#1B1C1D");
+           localStorage.setItem("footerColor", "#1B1C1D");
+
        });
        $('#redTheme').click(function() {
            $('.ui.inverted.menu').css("background", "#b70611");
            $('.footerColor').css("background", "#b70611");
+
+           localStorage.setItem("menuColor", "#b70611");
+           localStorage.setItem("footerColor", "#b70611");
        });
        $('#greenTheme').click(function() {
            $('.ui.inverted.menu').css("background", "#338028");
            $('.footerColor').css("background", "#338028");
+
+           localStorage.setItem("menuColor", "#338028");
+           localStorage.setItem("footerColor", "#338028");
        });
        $('#defaultTheme').click(function() {
            $('.ui.inverted.menu').css("background", "#004687");
            $('.footerColor').css("background", "#004687");
+
+           localStorage.setItem("menuColor", "#004687");
+           localStorage.setItem("footerColor", "#004687");
        });
 
 
@@ -245,7 +285,138 @@
        $('.main.ui.container').attr("style", "margin-left: 280px !important;");
        $('#horizontalMenu').attr("style", "margin-left: 280px !important;");
 
-       });  // end document.ready
+
+       /*
+       * Login form logic
+       * */
+       $('#loginForm')
+           .form({
+               fields: {
+                   email: {
+                       identifier  : 'email',
+                       rules: [
+                           { type   : 'empty',
+                             prompt : 'Please enter your e-mail' },
+                           { type   : 'email',
+                             prompt : 'Please enter a valid e-mail' }
+                       ]},
+                   password: {
+                       identifier  : 'password',
+                       rules: [
+                           { type   : 'empty',
+                             prompt : 'Please enter your password' },
+                           { type   : 'length[6]',
+                             prompt : 'Your password must be at least 6 characters' }
+                       ]}
+               }
+           });
+
+       /*
+        * Sign Up form logic
+        * */
+       $('#signUpForm')
+           .form({
+               fields: {
+                   name: {
+                       identifier  : 'name',
+                       rules: [
+                           { type   : 'empty',
+                             prompt : 'Please enter your name' }
+                       ]
+                   },
+                   email: {
+                       identifier  : 'email',
+                       rules: [
+                           { type   : 'empty',
+                             prompt : 'Please enter your e-mail' },
+                           { type   : 'email',
+                             prompt : 'Please enter a valid e-mail' }
+                       ]
+                   },
+                   newPassword: {
+                       identifier  : 'newPassword',
+                       rules: [
+                           { type   : 'empty',
+                             prompt : 'Please enter your password' },
+                           { type   : 'length[6]',
+                             prompt : 'Your password must be at least 6 characters' }
+                       ]
+                   },
+                   password2: {
+                       identifier: 'password2',
+                       rules: [
+                           {
+                               type   : 'match[newPassword]',
+                               prompt : 'Your passwords confirmation must match' }
+                       ]
+                   },
+                   agreeWithPrivacy: {
+                       identifier  : 'agreeWithPrivacy',
+                       rules: [
+                           {
+                               type   : 'checked',
+                               prompt : 'Please read the privacy policy and check if you agree'
+                           }
+                       ]
+                   }
+               }
+           });
+
+       $('#newUserName').keypress(function(e){
+           var txt = String.fromCharCode(e.which);
+           console.log(txt + ' : ' + e.which);
+           if(!txt.match(/[A-Za-z0-9+#.]/))
+           {
+               $("#nameErrorMsg").html("A-Za-z0-9+#. only").show().fadeOut(2000);
+               return false;
+           }
+       });
+
+       $('#newUserEmail').keypress(function(e){
+           var txt = String.fromCharCode(e.which);
+           console.log(txt + ' : ' + e.which);
+           if(!txt.match(/[A-Za-z0-9+#.@]/))
+           {
+               $("#emailErrorMsg").html("A-Za-z0-9+#.@ only").show().fadeOut(2000);
+               return false;
+           }
+       });
+
+       /**
+        * The Content-Type header is used by @RequestBody to determine what format the data being sent from the
+        * client in the request is. The accept header is used by @ResponseBody to determine what format to sent
+        * the data back to the client in the response. That's why you need both headers.
+        * */
+       $('#registerNewUser').click(function () {
+           var registerUserUrl = "/welcome/createNewUser";
+           var name = $('#newUserName').val().toString();
+           var email = $('#newUserEmail').val().toString();
+           var password = $('#newUserPassword').val().toString();
+
+           console.log(name + " " + email);
+
+           $.ajax({
+               headers: {
+                   'Accept': 'application/json',
+                   'Content-Type': 'application/json'
+               },
+               type: "POST",
+               dataType: "json",
+               url: registerUserUrl,
+               data: JSON.stringify({
+                   Name: name,
+                   Email: email,
+                   Password: password
+               }),
+               success: function (response) {
+                   console.log("new user insert response: " + response);
+               },
+               fail: function () {
+                   console.log("New user registration error.");
+               }
+           });
+       });
+   });  // end document.ready
 })(jQuery);  // end function($)
 
 
@@ -264,15 +435,17 @@
 // };
 
 function contractView() {
-    alert("contract");
+    console.log("contract view area");
     $('.main.ui.container').attr("style", "margin-left: 280px !important;");
-    $('#horizontalMenu').attr("style", "margin-left: 280px !important;");
+    $('#horizontalMenu').attr("style", "margin-left: 280px !important; ");
+    $('#adsProgress').attr("style", "margin-left: 280px !important; ");
 }
 
 function expandView() {
-    alert("expand");
+    console.log("expand view area");
     $('.main.ui.container').attr("style", "margin-left: 40px !important;");
     $('#horizontalMenu').attr("style", "margin-left: 40px !important;");
+    $('#adsProgress').attr("style", "margin-left: 40px !important;");
 }
 
 function toggleSidebar() {
@@ -377,9 +550,3 @@ function loadAzureData() {
         }
     });
 }
-
-
-
-
-
-

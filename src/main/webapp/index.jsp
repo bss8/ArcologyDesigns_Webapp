@@ -9,8 +9,7 @@
 
 <html>
     <head>
-        <meta charset=”utf-8″>
-        <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+        <meta charset="UTF-8">
         <meta name="description" content="Free tutorials and tools on the ArcologyDesigns site! Convert from any
             to any base, work with databases, UI design, Java, assembly and more. Visit today!">
 
@@ -72,7 +71,8 @@
     </script>
 
     <jsp:include page="pages/modals/initial_settings.jsp" flush="true" />
-
+    <jsp:include page="pages/modals/login.jsp" flush="true" />
+    <jsp:include page="pages/modals/sign_up.jsp" flush="true" />
 
     <script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/jquery-2.1.4.js"></script>
     <script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/jquery.address.js"></script>

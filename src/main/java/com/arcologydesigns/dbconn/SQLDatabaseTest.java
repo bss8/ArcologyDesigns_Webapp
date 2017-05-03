@@ -17,14 +17,7 @@ public class SQLDatabaseTest {
 
 
         String connectionString =
-                "jdbc:sqlserver://ads-test.database.windows.net:1433;"
-                        + "database=ads-test-db;"
-                        + "user=test-user1;"
-                        + "password=Germania@543;"
-                        + "encrypt=true;"
-                        + "trustServerCertificate=false;"
-                        + "hostNameInCertificate=*.database.windows.net;"
-                        + "loginTimeout=30;";
+                "";
 
         try {
             Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
