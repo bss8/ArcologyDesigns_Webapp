@@ -1,5 +1,7 @@
 package com.arcologydesigns.dbconn;
 
+import org.json.JSONArray;
+
 import java.sql.*;
 
 /**
@@ -17,16 +19,19 @@ public class MariaDbDao {
     private String newUserEmail;
     private String newUserPassword;
 
+    private String existingUserEmail;
+    private String existingUserPassword;
+
 
     public MariaDbDao() {
         database = "arcologydesignsdb";
         user = "borisremote";
         password = "eNDTbArtQrGcbJ76x987e4Q3Fv5izV";
     }
-    public void connectMariaDb() {
+    public Boolean connectMariaDb(boolean createNewUserFlag) {
 
 
-
+        //TODO: always remove before push
         String connectionString =
                 "";
 //                        + "&user=" + user
@@ -45,12 +50,21 @@ public class MariaDbDao {
             //"jdbc:mariadb://localhost:3306/DB?user=root&password=myPassword"
             Connection connection = DriverManager.getConnection(connectionString);
             System.out.println("got this far 1 ");
-            insertNewUser(connection);
+
+            if(createNewUserFlag) {
+                System.out.println("Creating new user...");
+                insertNewUser(connection);
+            } else {
+                System.out.println("Checking if user exists...");
+                return getUserDataForValidation(connection);
+            }
+
+
         } catch (SQLException e) {
             e.printStackTrace();
         }
 
-
+        return false;
     }
 
     private void insertNewUser(Connection connection) throws SQLException {
@@ -81,9 +95,40 @@ public class MariaDbDao {
         prepsInsertUserRole = connection.prepareStatement(insertUserRoleSql);
         prepsInsertUserRole.setString(1, addUserName);
         prepsInsertUserRole.setString(2, "USER");
-
-
     }
+
+    private Boolean getUserDataForValidation(Connection connection) throws SQLException {
+        String email = getExistingUserEmail();
+        String pass = getExistingUserPassword();
+
+        System.out.println("got this far 3");
+
+        String selectSql = "SELECT * FROM USERS WHERE EMAIL = ? AND PASSWORD = ?";
+        PreparedStatement statement = connection.prepareStatement(selectSql);
+        statement.setString(1,email);
+        statement.setString(2, pass);
+        ResultSet resultSet = statement.executeQuery();
+
+        System.out.println("got this far 4");
+
+        if (!resultSet.next() ) {
+            System.out.println("no data");
+            return false;
+        } else {
+            String rsEmail = resultSet.getString("EMAIL");
+            String rsPwd = resultSet.getString("PASSWORD");
+
+            System.out.println("rsEmail: " + rsEmail + "rsPass: " + rsPwd);
+
+            if(rsEmail.equals(email) && rsPwd.equals(pass)) {
+                System.out.println("User exists and is valid");
+                return true;
+            }
+        }
+        System.out.println("User does not exist and/or is not valid");
+        return false;
+    }
+
 
     private String getNewUserName() {
         return newUserName;
@@ -107,6 +152,23 @@ public class MariaDbDao {
 
     public void setNewUserPassword(String newUserPassword) {
         this.newUserPassword = newUserPassword;
+    }
+
+    //
+    private String getExistingUserEmail() {
+        return existingUserEmail;
+    }
+
+    public void setExistingUserEmail(String newUserEmail) {
+        this.existingUserEmail = newUserEmail;
+    }
+
+    private String getExistingUserPassword() {
+        return existingUserPassword;
+    }
+
+    public void setExistingUserPassword(String newUserPassword) {
+        this.existingUserPassword = newUserPassword;
     }
 
 }

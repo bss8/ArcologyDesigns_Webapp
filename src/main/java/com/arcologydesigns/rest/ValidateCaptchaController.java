@@ -34,6 +34,7 @@ public class ValidateCaptchaController {
         con.setRequestProperty("User-Agent", USER_AGENT);
         con.setRequestProperty("Accept-Language", "en-US,en;q=0.5");
 
+        //TODO: always remove before push
         String MY_SECRET = "";
         String urlParameters = "secret=" + MY_SECRET + "&response=" + userResponse;
 

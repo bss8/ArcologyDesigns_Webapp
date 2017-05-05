@@ -15,7 +15,7 @@ public class SQLDatabaseTest {
     public static void main(String[] args) {
 
 
-
+        //TODO: always remove before push
         String connectionString =
                 "";
 
@@ -82,7 +82,7 @@ public class SQLDatabaseTest {
         }
         finally {
             // Close the connections after the data has been handled.
-            if (prepsInsertPerson != null) try { prepsInsertPerson.close(); } catch(Exception e) {}
+            if (prepsInsertPerson != null) try { prepsInsertPerson.close(); } catch(Exception e) { }
             if (prepsUpdateAge != null) try { prepsUpdateAge.close(); } catch(Exception e) {}
             if (resultSet != null) try { resultSet.close(); } catch(Exception e) {}
             if (statement != null) try { statement.close(); } catch(Exception e) {}

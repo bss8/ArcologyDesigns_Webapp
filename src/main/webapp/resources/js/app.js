@@ -12,6 +12,7 @@
 
        var isUserLoggedIn = false;
        var logInMenuButton = $('#logInMenuButton');
+       var logInModal = $('#loginModal');
 
        if(isUserLoggedIn === false) {
            logInMenuButton.text("Sign In");
@@ -20,11 +21,17 @@
        }
 
        logInMenuButton.click(function () {
-           $('#loginModal').modal('show');
+
+           if (logInMenuButton.text() === "Log Out") {
+               logInMenuButton.text("Sign In");
+           } else {
+               logInModal.modal('show');
+           }
+
        });
 
        $('#signUpOpen').click(function () {
-          $('#loginModal').modal('hide');
+           logInModal.modal('hide');
           $('#signUpModal').modal('show');
        });
 
@@ -415,7 +422,54 @@
                    console.log("New user registration error.");
                }
            });
+           return false; // the onclick function must return false to prevent page reload
        });
+
+
+       $('#validateExistingUser').click(function () {
+           var validateUserUrl = "/welcome/validateUser";
+
+
+
+           var email = $('#existingUserEmail').val().toString();
+           var password = $('#existingUserPassword').val().toString();
+
+
+
+           alert(name + " " + email);
+
+           $.ajax({
+               headers: {
+                   'Accept': 'application/json',
+                   'Content-Type': 'application/json'
+               },
+               type: "POST",
+               dataType: "json",
+               url: validateUserUrl,
+               data: JSON.stringify({
+                   Email: email,
+                   Password: password
+               }),
+               success: function (response) {
+                   //alert(response);
+
+                   if (response === true) {
+                       //alert("change to Log Out");
+                       $('#logInMenuButton').text("Log Out");
+                       logInModal.modal('hide');
+                   }
+               },
+               fail: function () {
+                   console.log("New user registration error.");
+               }
+           });
+           return false; // the onclick function must return false to prevent page reload
+       });
+
+
+
+
+
    });  // end document.ready
 })(jQuery);  // end function($)
 
