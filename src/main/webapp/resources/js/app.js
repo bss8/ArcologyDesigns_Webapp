@@ -13,6 +13,7 @@
        var isUserLoggedIn = false;
        var logInMenuButton = $('#logInMenuButton');
        var logInModal = $('#loginModal');
+       var loginForm = $('#loginForm');
 
        if(isUserLoggedIn === false) {
            logInMenuButton.text("Sign In");
@@ -61,6 +62,11 @@
          console.warn("NO LOCAL STORAGE SUPPORT!");
       }
 
+       $("form").bind("keypress", function(e) {
+           if (e.keyCode === 13) {
+               return false;
+           }
+       });
 
       $('#sidebar_toggle').popup({
           //inline   : true,
@@ -296,7 +302,7 @@
        /*
        * Login form logic
        * */
-       $('#loginForm')
+       loginForm
            .form({
                fields: {
                    email: {
@@ -417,6 +423,11 @@
                }),
                success: function (response) {
                    console.log("new user insert response: " + response);
+
+                   if(response === false) {
+                       $("#emailErrorMsg").html("Email already exists!").show().fadeOut(8000);
+                   }
+
                },
                fail: function () {
                    console.log("New user registration error.");
@@ -461,10 +472,13 @@
                },
                fail: function () {
                    console.log("New user registration error.");
+                   $(".error .message").html("Login error. Please submit a ticket!");
+
                }
            });
            return false; // the onclick function must return false to prevent page reload
        });
+
 
 
 

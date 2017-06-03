@@ -26,8 +26,6 @@
         <p>While you may notice an emphasis on IT and software development topics, make no mistake - this site is
         all about taking your career, regardless of the field, to the next level.</p>
 
-        <p>...about my journey... </p>
-
         <p>The resources available on this site are intended to help you no matter the stage of your career.</p>
     </div>
 

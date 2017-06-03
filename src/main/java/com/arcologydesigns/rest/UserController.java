@@ -4,6 +4,8 @@ import com.arcologydesigns.dbconn.MariaDbDao;
 import org.json.JSONObject;
 import org.springframework.web.bind.annotation.*;
 
+import java.sql.Connection;
+
 /**
  * Created by boris on 5/2/2017.
  */
@@ -13,7 +15,7 @@ public class UserController {
 
     @RequestMapping(value = "/createNewUser", method = RequestMethod.POST,
             consumes = "application/json")
-    public void insertNewUser(@RequestBody String postPayload) {
+    public String insertNewUser(@RequestBody String postPayload) {
         System.out.println("can you see new user payload: " + postPayload);
 
         JSONObject jsonObject = new JSONObject(postPayload);
@@ -27,8 +29,12 @@ public class UserController {
         mariaDbDao.setNewUserEmail(email);
         mariaDbDao.setNewUserPassword(password);
 
-        mariaDbDao.connectMariaDb(true);
-    }
+        Boolean returnCode = mariaDbDao.connectMariaDb(true);
+
+        return returnCode.toString();
+    } // end /createNewUser
+
+
 
     @RequestMapping(value = "/validateUser", method = RequestMethod.POST,
             consumes = "application/json")
@@ -51,8 +57,5 @@ public class UserController {
 
 
         return isUserValid.toString();
-    }
-
-
-
-}
+    } // end /validateUser
+} // end class

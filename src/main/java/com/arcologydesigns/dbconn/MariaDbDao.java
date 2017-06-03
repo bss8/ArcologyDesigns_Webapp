@@ -32,13 +32,8 @@ public class MariaDbDao {
 
 
         //TODO: always remove before push
-        String connectionString =
-                "";
-//                        + "&user=" + user
-//                        + "&password=" + password
-//                        + "&trustServerCertificate=false"
-//                        + "&useSSL=true"
-//                        + "&connectTimeout=10000";
+        String connectionString = "";
+
 
         try {
             Class.forName("org.mariadb.jdbc.Driver");
@@ -53,7 +48,10 @@ public class MariaDbDao {
 
             if(createNewUserFlag) {
                 System.out.println("Creating new user...");
-                insertNewUser(connection);
+                int code = insertNewUser(connection);
+
+                return code != -1;
+
             } else {
                 System.out.println("Checking if user exists...");
                 return getUserDataForValidation(connection);
@@ -67,34 +65,51 @@ public class MariaDbDao {
         return false;
     }
 
-    private void insertNewUser(Connection connection) throws SQLException {
+    private int insertNewUser(Connection connection) throws SQLException {
         PreparedStatement prepsInsertUser = null;
 
         String addUserName = getNewUserName();
         String addUserEmail = getNewUserEmail();
         String addUserPassword = getNewUserPassword();
 
-        // INSERT new user in database
-        String insertUsersSql = "INSERT INTO USERS ( USERNAME, EMAIL, PASSWORD, ENABLED) VALUES "
-                + "(?, ?, ?, ?)";
+        //first check if email exists, no duplicate emails
+        String selectSql = "SELECT * FROM USERS WHERE EMAIL = ?";
+        PreparedStatement checkEmailExists = connection.prepareStatement(selectSql);
+        checkEmailExists.setString(1, addUserEmail);
+        ResultSet rs = checkEmailExists.executeQuery();
 
-        prepsInsertUser = connection.prepareStatement(insertUsersSql);
-        prepsInsertUser.setString(1,addUserName);
-        prepsInsertUser.setString(2, addUserEmail);
-        prepsInsertUser.setString(3, addUserPassword);
-        prepsInsertUser.setInt(4, 1);
+        if (!rs.next() ) {
 
-        prepsInsertUser.execute();
+            // INSERT new user in database
+            String insertUsersSql = "INSERT INTO USERS ( USERNAME, EMAIL, PASSWORD, ENABLED) VALUES "
+                    + "(?, ?, ?, ?)";
 
-        System.out.println("got this far 2");
+            prepsInsertUser = connection.prepareStatement(insertUsersSql);
+            prepsInsertUser.setString(1,addUserName);
+            prepsInsertUser.setString(2, addUserEmail);
+            prepsInsertUser.setString(3, addUserPassword);
+            prepsInsertUser.setInt(4, 1);
 
-        PreparedStatement prepsInsertUserRole = null;
-        // INSERT user's role in database
-        String insertUserRoleSql = "INSERT INTO USER_ROLES ( USERNAME, USER_ROLE) VALUES "
-                + "(?, ?)";
-        prepsInsertUserRole = connection.prepareStatement(insertUserRoleSql);
-        prepsInsertUserRole.setString(1, addUserName);
-        prepsInsertUserRole.setString(2, "USER");
+            prepsInsertUser.execute();
+
+            //System.out.println("got this far 2");
+
+             //prepsInsertUserRole = null;
+            // INSERT user's role in database
+            String insertUserRoleSql = "INSERT INTO USER_ROLES ( EMAIL, USER_ROLE) VALUES "
+                    + "(?, ?)";
+            PreparedStatement prepsInsertUserRole = connection.prepareStatement(insertUserRoleSql);
+            prepsInsertUserRole.setString(1, addUserEmail);
+            prepsInsertUserRole.setString(2, "USER");
+
+            prepsInsertUserRole.execute();
+        } else {
+            System.out.println("Email exists, cannot create duplicate!");
+            return -1;
+        }
+
+        return 0;
+
     }
 
     private Boolean getUserDataForValidation(Connection connection) throws SQLException {

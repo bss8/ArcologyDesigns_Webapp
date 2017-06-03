@@ -14,7 +14,7 @@
                     Log-in to your account
                 </div>
             </h2>
-            <form id="loginForm" class="ui large form" method="POST">
+            <form id="loginForm" class="ui large form" method="POST" onsubmit="return false;">
                 <div class="ui stacked segment">
                     <div class="field">
                         <div class="ui left icon input">
